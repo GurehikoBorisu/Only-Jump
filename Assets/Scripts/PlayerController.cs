@@ -11,11 +11,10 @@ public class PlayerController : MonoBehaviour
     public AudioSource ripA;
 
     private float curentSpeed;
-    private float curentTime;
     [SerializeField] private float speed;
     [SerializeField] private float jump;
 
-    public bool isGround;
+    [SerializeField] public bool isGround;
 
     void Start()
     {
@@ -27,8 +26,6 @@ public class PlayerController : MonoBehaviour
         Walk();
         Run();
         Jump();
-
-        curentTime += Time.deltaTime;
     }
 
     public void Walk()
