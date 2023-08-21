@@ -66,7 +66,7 @@ public class PlayerMove : MonoBehaviour
     public float realSpeed;
     public void Run()
     {
-        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) && isGround)
+        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) && isGround && !jumpLock)
         {
             realSpeed = fastSpeed;
             anim.SetBool("run", true);
