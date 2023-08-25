@@ -45,12 +45,19 @@ public class MovingPlatform : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
-        collision.transform.parent = transform;
+        if(other.gameObject.tag == "Player")
+        {
+            other.transform.parent = transform;
+        }
+
     }
-    private void OnCollisionExit(Collision collision) 
+    private void OnCollisionExit(Collision other) 
     {
-        collision.transform.parent = null;
+        if (other.gameObject.tag == "Player")
+        {
+            other.transform.parent = null;
+        }
     }
 }
