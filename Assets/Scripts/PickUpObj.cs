@@ -1,48 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PickUpObj : MonoBehaviour
 {
-    public GameObject camera;
-    public float distance = 15f;
-    GameObject currentWeapon;
-    bool canPickUp = false;
+    private float distance = 15f;
+    public Transform pos;
+    private Rigidbody rb;
 
-    void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.P)) PickUp();
-        if (Input.GetKeyDown(KeyCode.Q)) Drop();
+        rb = GetComponent<Rigidbody>();
     }
 
-    void PickUp()
+    void OnMouseDown()
     {
-        RaycastHit hit;
-
-        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, distance))
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, distance))
         {
-            if (hit.transform.tag == "Obj")
-            {
-                if (canPickUp) Drop();
-
-                currentWeapon = hit.transform.gameObject;
-                currentWeapon.GetComponent<Rigidbody>().isKinematic = true;
-                currentWeapon.GetComponent<Collider>().isTrigger = true;
-                currentWeapon.transform.parent = transform;
-                currentWeapon.transform.localPosition = Vector3.zero;
-                currentWeapon.transform.localEulerAngles = new Vector3(10f, 0f, 0f);
-                canPickUp = true;
-            }
+            rb.isKinematic = true;
+            rb.MovePosition(pos.position);
         }
     }
 
-    void Drop()
+    private void FixedUpdate()
     {
-        currentWeapon.transform.parent = null;
-        currentWeapon.GetComponent<Rigidbody>().isKinematic = false;
-        currentWeapon.GetComponent<Collider>().isTrigger = false;
-        canPickUp = false;
-        currentWeapon = null;
+        if (rb.isKinematic == true)
+        {
+            this.gameObject.transform.position = pos.position;
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                rb.useGravity = true;
+                rb.isKinematic = false;
+                rb.AddForce(Camera.main.transform.forward * 500);
+            }
+        }
     }
 }
