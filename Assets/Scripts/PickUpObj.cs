@@ -10,7 +10,6 @@ public class PickUpObj : MonoBehaviour
     GameObject currentWeapon;
     bool canPickUp = false;
 
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P)) PickUp();
@@ -20,6 +19,7 @@ public class PickUpObj : MonoBehaviour
     void PickUp()
     {
         RaycastHit hit;
+
         if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, distance))
         {
             if (hit.transform.tag == "Obj")
