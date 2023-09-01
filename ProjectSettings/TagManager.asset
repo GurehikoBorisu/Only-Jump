@@ -7,6 +7,8 @@ TagManager:
   - Laser
   - Ground
   - Obj
+  - Buttons_1
+  - Buttons_2
   layers:
   - Default
   - TransparentFX
