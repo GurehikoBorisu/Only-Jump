@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PickUpObj : MonoBehaviour
 {
-    private float distance = 15f;
+    private float distance = 3f;
     private float distanceView = 3f;
     public bool isHand;
     public Transform pos;
@@ -19,14 +19,7 @@ public class PickUpObj : MonoBehaviour
 
     private void Update()
     {
-        if (isHand == true)
-        {
-            rayText.SetActive(false);
-        }
-        else
-        {
-            //rayText.SetActive (true);
-        }
+        
     }
 
     void OnMouseDown()
@@ -34,20 +27,41 @@ public class PickUpObj : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, distance))
         {
+            rayText.SetActive(false);
             rb.isKinematic = true;
-            isHand = true;
             rb.MovePosition(pos.position);
+        }
+        else
+        {
+
         }
     }
 
-    private void OnMouseOver()
+    //private void OnMouseOver()
+    //{
+    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    //    if (Physics.Raycast(ray, distanceView))
+    //    {
+    //        rayText.SetActive(true);
+    //    }
+    //    else
+    //    {
+    //        rayText.SetActive(false);
+    //    }
+    //}
+
+    private void OnMouseEnter()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, distanceView))
         {
             rayText.SetActive(true);
-        }
-        else
+        }       
+    }
+
+    private void OnMouseExit()
+    {
+        if (distanceView < 4)
         {
             rayText.SetActive(false);
         }
@@ -57,13 +71,11 @@ public class PickUpObj : MonoBehaviour
     {
         if (rb.isKinematic == true)
         {
-            rayText.SetActive(false);
             this.gameObject.transform.position = pos.position;
             if (Input.GetKeyDown(KeyCode.G))
             {
                 rb.useGravity = true;
                 rb.isKinematic = false;
-                isHand = false;
                 rayText.SetActive(false);
                 rb.AddForce(Camera.main.transform.forward * 500);
             }
