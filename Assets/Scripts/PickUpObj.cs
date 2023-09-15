@@ -15,40 +15,17 @@ public class PickUpObj : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-    private void Update()
-    {
-        
-    }
+    }    
 
     void OnMouseDown()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, distance))
         {
-            rayText.SetActive(false);
             rb.isKinematic = true;
             rb.MovePosition(pos.position);
-        }
-        else
-        {
-
-        }
-    }
-
-    //private void OnMouseOver()
-    //{
-    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //    if (Physics.Raycast(ray, distanceView))
-    //    {
-    //        rayText.SetActive(true);
-    //    }
-    //    else
-    //    {
-    //        rayText.SetActive(false);
-    //    }
-    //}
+        }       
+    }   
 
     private void OnMouseEnter()
     {
