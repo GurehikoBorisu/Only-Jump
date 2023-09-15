@@ -6,12 +6,7 @@ using UnityEngine.SceneManagement;
 public class KillPlayer : MonoBehaviour
 {
     public GameObject door;
-    private int healths;
-
-    void Start()
-    {
-        
-    }
+    private int healths = 100;    
 
     void Update()
     {
@@ -27,11 +22,17 @@ public class KillPlayer : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    {      
         if (other.gameObject.tag == "1")
         {
-            int damage = 100;
-            healths -= damage;
+            Destroy(door);
+        }
+
+        if (other.gameObject.tag == "2")
+        {
+            
+            healths -= 100;
+            Destroy(other.gameObject);
         }
     }
 }

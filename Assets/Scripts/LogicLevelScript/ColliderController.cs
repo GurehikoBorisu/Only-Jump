@@ -9,13 +9,6 @@ public class ColliderController : MonoBehaviour
     public int count;
 
     public bool isButtons_1;
-    public bool isButtons_2;
-    public bool isButtons_3;
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {                   
@@ -36,8 +29,6 @@ public class ColliderController : MonoBehaviour
         if (other.gameObject.tag == "Obj")
         {
             isButtons_1 = true;
-            Debug.Log(count);
-            Debug.Log(isButtons_1);
         }        
     }
 
@@ -46,8 +37,6 @@ public class ColliderController : MonoBehaviour
         if (other.gameObject.tag == "Obj")
         {
             count = -1;
-            isButtons_1 = false;
-            isButtons_2 = false;
         }       
     }
 }
