@@ -59,7 +59,6 @@ public class PickUpObj : MonoBehaviour
             {
                 rb.useGravity = true;
                 rb.isKinematic = false;
-                //isHand = false;
                 rayText.SetActive(false);
                 rb.AddForce(Camera.main.transform.forward * 500);
             }
