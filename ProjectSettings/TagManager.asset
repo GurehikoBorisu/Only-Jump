@@ -9,6 +9,10 @@ TagManager:
   - Obj
   - Buttons_1
   - Buttons_2
+  - 1
+  - 2
+  - 3
+  - 4
   layers:
   - Default
   - TransparentFX
@@ -35,7 +39,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - PostProcessingLogic
   - 
   - 
   - 
