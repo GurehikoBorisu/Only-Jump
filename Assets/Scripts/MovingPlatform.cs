@@ -6,6 +6,7 @@ public class MovingPlatform : MonoBehaviour
 {
     public List<Vector3> position = new List<Vector3>();
     public float delay;
+    public float duration;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +23,12 @@ public class MovingPlatform : MonoBehaviour
         Vector3 startPositon;
         Vector3 targetPosition;
         float startTime;
-        float duration;
         int i = 0;
         while (true)
         {
             startPositon = transform.position;
             targetPosition = position[i];
             startTime = Time.time;
-            duration = 5;
             while (Time.time - startTime < duration)
             {
                 float t = (Time.time - startTime) / duration;
