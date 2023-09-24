@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
 --- !u!1 &4118168640168746998
-=======
---- !u!1 &3677945197756658167
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,13 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 4118168640168746993}
   - component: {fileID: 4118168640168746992}
-=======
-  - component: {fileID: 3677945197756658160}
-  - component: {fileID: 3677945197756658161}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -26,58 +17,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!4 &4118168640168746993
-=======
---- !u!4 &3677945197756658160
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640168746998}
-=======
-  m_GameObject: {fileID: 3677945197756658167}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.503, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< HEAD
   m_Father: {fileID: 4118168640912486341}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &4118168640168746992
-=======
-  m_Father: {fileID: 3677945198089273796}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3677945197756658161
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640168746998}
-=======
-  m_GameObject: {fileID: 3677945197756658167}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &4118168640696587202
-=======
---- !u!1 &3677945198032271996
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,7 +53,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 4118168640696587229}
   - component: {fileID: 4118168640696587228}
   m_Layer: 6
@@ -134,11 +101,6 @@ GameObject:
   - component: {fileID: 4118168640897668220}
   - component: {fileID: 4118168640897668222}
   - component: {fileID: 4118168640897668223}
-=======
-  - component: {fileID: 3677945198032271997}
-  - component: {fileID: 3677945198032271999}
-  - component: {fileID: 3677945198032271998}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -146,61 +108,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!4 &4118168640897668220
-=======
---- !u!4 &3677945198032271997
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640897668221}
-=======
-  m_GameObject: {fileID: 3677945198032271996}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.298, y: 0.308, z: 0.494}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< HEAD
   m_Father: {fileID: 4118168640912486341}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4118168640897668222
-=======
-  m_Father: {fileID: 3677945198089273796}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3677945198032271999
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640897668221}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &4118168640897668223
-=======
-  m_GameObject: {fileID: 3677945198032271996}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3677945198032271998
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640897668221}
-=======
-  m_GameObject: {fileID: 3677945198032271996}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -236,11 +173,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1 &4118168640912486350
-=======
---- !u!1 &3677945198089273807
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,7 +181,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 4118168640912486341}
   - component: {fileID: 4118168640912486346}
   - component: {fileID: 4118168640912486347}
@@ -257,16 +189,6 @@ GameObject:
   - component: {fileID: 4118168640912486340}
   - component: {fileID: 4118168640912486343}
   - component: {fileID: 4118168640912486342}
-=======
-  - component: {fileID: 3677945198089273796}
-  - component: {fileID: 3677945198089273803}
-  - component: {fileID: 3677945198089273802}
-  - component: {fileID: 3677945198089273801}
-  - component: {fileID: 3677945198089273800}
-  - component: {fileID: 3677945198089273797}
-  - component: {fileID: 3677945198089273798}
-  - component: {fileID: 3677945198089273799}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -274,27 +196,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!4 &4118168640912486341
-=======
---- !u!4 &3677945198089273796
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640912486350}
-=======
-  m_GameObject: {fileID: 3677945198089273807}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.37}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-<<<<<<< HEAD
   - {fileID: 4118168640897668220}
   - {fileID: 4118168641562938826}
   - {fileID: 4118168640168746993}
@@ -303,40 +216,20 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4118168640912486346
-=======
-  - {fileID: 3677945198032271997}
-  - {fileID: 3677945198438638539}
-  - {fileID: 3677945197756658160}
-  - {fileID: 3677945198233877980}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3677945198089273803
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640912486350}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &4118168640912486347
-=======
-  m_GameObject: {fileID: 3677945198089273807}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3677945198089273802
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640912486350}
-=======
-  m_GameObject: {fileID: 3677945198089273807}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -372,42 +265,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< HEAD
 --- !u!65 &4118168640912486344
-=======
---- !u!65 &3677945198089273801
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640912486350}
-=======
-  m_GameObject: {fileID: 3677945198089273807}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5, z: 1}
   m_Center: {x: 0, y: -0.24613565, z: 0}
-<<<<<<< HEAD
 --- !u!54 &4118168640912486345
-=======
---- !u!54 &3677945198089273800
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640912486350}
-=======
-  m_GameObject: {fileID: 3677945198089273807}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -417,33 +294,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
-<<<<<<< HEAD
 --- !u!114 &4118168640912486340
-=======
---- !u!114 &3677945198089273797
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640912486350}
-=======
-  m_GameObject: {fileID: 3677945198089273807}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07174de432068994ca9fb96023066ce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   rb: {fileID: 4118168640912486345}
   anim: {fileID: 4118168640912486343}
-=======
-  rb: {fileID: 3677945198089273800}
-  anim: {fileID: 3677945198089273798}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   moveVector: {x: 0, y: 0, z: 0}
   moveSpeed: 3
   jumpForce: 630
@@ -452,7 +316,6 @@ MonoBehaviour:
   isGround: 0
   Ground:
     serializedVersion: 2
-<<<<<<< HEAD
     m_Bits: 128
   GroundCheck: {fileID: 4118168640168746993}
   GroundCheckRadius: 0.2
@@ -464,30 +327,13 @@ MonoBehaviour:
   posStand: {fileID: 4118168640912486342}
   posSquat: {fileID: 4118168640912486344}
 --- !u!95 &4118168640912486343
-=======
-    m_Bits: 192
-  GroundCheck: {fileID: 3677945197756658160}
-  GroundCheckRadius: 0.2
-  TopCheck: {fileID: 3677945198233877980}
-  TopCheckRadius: 0.5
-  Roof:
-    serializedVersion: 2
-    m_Bits: 192
-  posStand: {fileID: 3677945198089273799}
-  posSquat: {fileID: 3677945198089273801}
---- !u!95 &3677945198089273798
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640912486350}
-=======
-  m_GameObject: {fileID: 3677945198089273807}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f7d75074514859e4193b2d943bb5f37d, type: 2}
@@ -501,32 +347,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
-<<<<<<< HEAD
 --- !u!65 &4118168640912486342
-=======
---- !u!65 &3677945198089273799
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168640912486350}
-=======
-  m_GameObject: {fileID: 3677945198089273807}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &4118168641562938827
-=======
---- !u!1 &3677945198233877955
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -534,60 +368,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 4118168641562938826}
   - component: {fileID: 4118168641562938820}
   - component: {fileID: 4118168641562938821}
-=======
-  - component: {fileID: 3677945198233877980}
-  - component: {fileID: 3677945198233877981}
-  m_Layer: 6
-  m_Name: TopCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3677945198233877980
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3677945198233877955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.48, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3677945198089273796}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3677945198233877981
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3677945198233877955}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &3677945198438638538
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3677945198438638539}
-  - component: {fileID: 3677945198438638533}
-  - component: {fileID: 3677945198438638532}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -595,61 +378,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!4 &4118168641562938826
-=======
---- !u!4 &3677945198438638539
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168641562938827}
-=======
-  m_GameObject: {fileID: 3677945198438638538}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.235, y: 0.308, z: 0.494}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< HEAD
   m_Father: {fileID: 4118168640912486341}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4118168641562938820
-=======
-  m_Father: {fileID: 3677945198089273796}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3677945198438638533
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168641562938827}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &4118168641562938821
-=======
-  m_GameObject: {fileID: 3677945198438638538}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3677945198438638532
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 4118168641562938827}
-=======
-  m_GameObject: {fileID: 3677945198438638538}
->>>>>>> parent of 59de4f1 (Revert "PlayerController")
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
