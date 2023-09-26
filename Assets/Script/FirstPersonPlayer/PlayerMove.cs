@@ -97,7 +97,7 @@ public class PlayerMove : MonoBehaviour
 
     void SquatCheck()
     {
-        if ((Input.GetKey(KeyCode.E) && isGround))
+        if ((Input.GetKey(KeyCode.C) && isGround))
         {
             anim.SetBool("squat", true);
             posStand.enabled = false;
