@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/LasersRoom.unity
     guid: 62bc0d85fded51b4fa861fe697f4be6d
   - enabled: 1
-    path: Assets/Scenes/LogicGame.unity
+    path: Assets/Scenes/Levels/LogicGame.unity
     guid: e59e7ad228060904d9cfe600b68eac06
   m_configObjects: {}

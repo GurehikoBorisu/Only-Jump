@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class KillPlayer : MonoBehaviour
 {
     public GameObject door;
-    private int healths = 100;    
+    public int healths = 100;    
 
     void Update()
     {
@@ -15,7 +15,7 @@ public class KillPlayer : MonoBehaviour
 
     public void Kill()
     {
-        if (healths == 0)
+        if (healths <= 0)
         {
             SceneManager.LoadScene(1);
         }

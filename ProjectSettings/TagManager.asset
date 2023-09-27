@@ -13,6 +13,7 @@ TagManager:
   - 2
   - 3
   - 4
+  - hand
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Water
   - UI
   - Glow
-  - 
+  - Ground
   - 
   - 
   - 

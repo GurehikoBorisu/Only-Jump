@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 public class PickUpObj : MonoBehaviour
 {
-    private float distance = 3f;
+    private float distance = 3f;    
     private float distanceView = 3f;
     public bool isHand;
     public Transform pos;
@@ -15,11 +17,12 @@ public class PickUpObj : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        pos = GameObject.FindGameObjectWithTag("hand").transform; // ---добавлено---
     }
 
     private void Update()
     {
-        
+
     }
 
     void OnMouseDown()
@@ -72,7 +75,7 @@ public class PickUpObj : MonoBehaviour
         if (rb.isKinematic == true)
         {
             this.gameObject.transform.position = pos.position;
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.Q)) // ---изменено---
             {
                 rb.useGravity = true;
                 rb.isKinematic = false;
