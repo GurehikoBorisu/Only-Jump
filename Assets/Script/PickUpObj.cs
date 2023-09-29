@@ -9,7 +9,7 @@ public class PickUpObj : MonoBehaviour
 {
     private float distance = 3f;    
     private float distanceView = 3f;
-    public bool isHand;
+    static bool isHand;
     public Transform pos;
     private Rigidbody rb;
     public GameObject rayText;
@@ -17,41 +17,21 @@ public class PickUpObj : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        pos = GameObject.FindGameObjectWithTag("hand").transform; // ---добавлено---
-    }
-
-    private void Update()
-    {
-
-    }
+        pos = GameObject.FindGameObjectWithTag("hand").transform;
+        isHand = false;
+    }   
 
     void OnMouseDown()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, distance))
+        if (Physics.Raycast(ray, distance) && !isHand)
         {
             rayText.SetActive(false);
             rb.isKinematic = true;
+            isHand = true;
             rb.MovePosition(pos.position);
-        }
-        else
-        {
-
-        }
-    }
-
-    //private void OnMouseOver()
-    //{
-    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //    if (Physics.Raycast(ray, distanceView))
-    //    {
-    //        rayText.SetActive(true);
-    //    }
-    //    else
-    //    {
-    //        rayText.SetActive(false);
-    //    }
-    //}
+        }       
+    }  
 
     private void OnMouseEnter()
     {
@@ -70,14 +50,15 @@ public class PickUpObj : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (rb.isKinematic == true)
         {
-            this.gameObject.transform.position = pos.position;
-            if (Input.GetKeyDown(KeyCode.Q)) // ---изменено---
+            gameObject.transform.position = pos.position;
+            if (Input.GetKeyDown(KeyCode.Q) && isHand) 
             {
                 rb.useGravity = true;
+                isHand = false;
                 rb.isKinematic = false;
                 rayText.SetActive(false);
                 rb.AddForce(Camera.main.transform.forward * 500);

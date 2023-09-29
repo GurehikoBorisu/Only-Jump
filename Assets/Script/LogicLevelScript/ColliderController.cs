@@ -9,16 +9,16 @@ public class ColliderController : MonoBehaviour
     public int count;
 
     public bool isButtons_1;
+    public bool isButtons_2;
 
     void Update()
     {                   
         if (isButtons_1)
         {          
-            count = 0;
             Destroy(door[0]);
         }
 
-        if (count == -1)
+        if (isButtons_2)
         {
             Destroy(door[1]);
         }
@@ -36,7 +36,7 @@ public class ColliderController : MonoBehaviour
     {
         if (other.gameObject.tag == "Obj")
         {
-            count = -1;
+            isButtons_2 = true;
         }       
     }
 }

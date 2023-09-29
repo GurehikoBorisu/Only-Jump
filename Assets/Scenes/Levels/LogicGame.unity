@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454902908813131893, guid: 73926e04cb3d2b44fab06a035e352d6b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5454902908813131899, guid: 73926e04cb3d2b44fab06a035e352d6b, type: 3}
       propertyPath: m_Name
@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454902908813131899, guid: 73926e04cb3d2b44fab06a035e352d6b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73926e04cb3d2b44fab06a035e352d6b, type: 3}
@@ -646,7 +646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58e64216e64b82489f57385ca77b799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHand: 0
   pos: {fileID: 0}
   rayText: {fileID: 1741050813}
 --- !u!54 &212803086
@@ -1571,8 +1570,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 3.0901546, z: 1}
+  m_Center: {x: 0, y: 1.0450778, z: 0}
 --- !u!23 &513494212
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2906,8 +2905,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.8992405, z: 1}
+  m_Center: {x: 0, y: 0.9496205, z: 0}
 --- !u!23 &916884071
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3148,7 +3147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454902908813131899, guid: 73926e04cb3d2b44fab06a035e352d6b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73926e04cb3d2b44fab06a035e352d6b, type: 3}
@@ -3264,8 +3263,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4.5398283, z: 1}
+  m_Center: {x: 0, y: 1.7699147, z: 0}
 --- !u!23 &1083888631
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3340,6 +3339,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1095459574}
   healths: 100
+--- !u!65 &1113521201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113521193}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1145732394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3592,6 +3604,7 @@ MonoBehaviour:
   - {fileID: 1771195768}
   count: 0
   isButtons_1: 0
+  isButtons_2: 0
 --- !u!1001 &1265101184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3707,8 +3720,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 3.9673488, z: 1}
+  m_Center: {x: 0, y: 1.4836758, z: 0}
 --- !u!23 &1285360894
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5774,6 +5787,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4599242839449317941, guid: c01ea4b5e1fd8914e96799c51219f8c5, type: 3}
   m_PrefabInstance: {fileID: 2044512239}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2049554017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2049554019}
+  - component: {fileID: 2049554018}
+  m_Layer: 0
+  m_Name: TimerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2049554018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049554017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c4787c48110f74897c503910bd1347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2049554019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049554017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.15027845, y: 8.318687, z: 170.79086}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2074436875
 PrefabInstance:
   m_ObjectHideFlags: 0

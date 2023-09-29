@@ -2,21 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
     public GameObject[] panels;
+
     public int numberScene;
+
+    [SerializeField] private Text TimeText;
+
     public AudioSource _click;
+
+    private void Awake()
+    {
+        if (PlayerPrefs.HasKey("TimeGame"))
+        {
+            TimerGame.timeGame = PlayerPrefs.GetFloat("TimeGame");
+        }
+    }
 
     void Start()
     {
-        
+        TimeText.text = ((int)TimerGame.timeGame).ToString() + "секунд/second";
     }
 
     void Update()
     {
-        
+        TimeText.text = ((int)TimerGame.timeGame).ToString() + "секунд/second";
     }
 
     public void Play()
