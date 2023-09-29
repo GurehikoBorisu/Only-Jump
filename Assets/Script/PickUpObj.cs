@@ -19,12 +19,6 @@ public class PickUpObj : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         pos = GameObject.FindGameObjectWithTag("hand").transform; // ---добавлено---
     }
-
-    private void Update()
-    {
-
-    }
-
     void OnMouseDown()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -70,7 +64,7 @@ public class PickUpObj : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (rb.isKinematic == true)
         {

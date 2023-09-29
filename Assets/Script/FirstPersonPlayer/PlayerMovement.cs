@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-
+    public Animator anim;
+    public Color color;
     Vector3 velocity;
     public float gravity;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
         GroundCheckRadius = GroundCheck.GetComponent<SphereCollider>().radius;
         TopCheckRadius = TopCheck.GetComponent<SphereCollider>().radius;
         realSpeed = moveSpeed;
@@ -22,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Jump();
         Walk();
+        Run();
         SquatCheck();
         CheckingGround();
     }
@@ -40,7 +44,10 @@ public class PlayerMovement : MonoBehaviour
         moveVector.z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * moveVector.x + transform.forward * moveVector.z;
+        Vector3 moveInput = new Vector3(moveVector.x, 0, moveVector.z).normalized;
+
         controller.Move(move * moveSpeed * Time.deltaTime);
+        anim.SetFloat("Speed", Mathf.Abs(moveInput.magnitude));
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
@@ -51,10 +58,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) && isGround && !jumpLock)
         {
             realSpeed = fastSpeed;
+            anim.SetBool("run", true);
         }
         else
         {
             realSpeed = moveSpeed;
+            anim.SetBool("run", false);
         }
     }
 
@@ -63,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGround && !jumpLock)
         {
+            anim.StopPlayback();
+            anim.Play("jump");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }
@@ -72,19 +83,27 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask Roof;
     private bool jumpLock;
 
+    public float squatHeight = 0.6f;
+    public float getUpHeight = 3.6f;
+
+    public Vector3 squatPos = new Vector3(0, -1.2f, 0);
+    public Vector3 getUpPos = new Vector3(0, 0, 0);
+
     void SquatCheck()
     {
         if (Input.GetKey(KeyCode.C) && isGround)
         {
             jumpLock = true;
-            controller.height = 0.6f;
-            controller.center = new Vector3(0, -1.2f, 0);
+            anim.SetBool("squat", true);
+            controller.height = squatHeight;
+            controller.center = squatPos;
         }
         else if (!Physics.CheckSphere(TopCheck.position, TopCheckRadius, Roof))
         {
             jumpLock = false;
-            controller.height = 3.6f;
-            controller.center = new Vector3(0, 0, 0);
+            anim.SetBool("squat", false);
+            controller.height = getUpHeight;
+            controller.center = getUpPos;
         }
     }
     public bool isGround;
@@ -95,5 +114,6 @@ public class PlayerMovement : MonoBehaviour
     void CheckingGround()
     {
         isGround = Physics.CheckSphere(GroundCheck.position, GroundCheckRadius, groundMask);
+        anim.SetBool("onGround", isGround);
     }
 }

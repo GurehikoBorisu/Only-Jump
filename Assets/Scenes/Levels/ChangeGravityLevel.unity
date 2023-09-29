@@ -6254,6 +6254,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 815288124, guid: 738579887ae0ccb468e5e28913dc9325, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 815288127, guid: 738579887ae0ccb468e5e28913dc9325, type: 3}
       propertyPath: volumeTrigger
       value: 
