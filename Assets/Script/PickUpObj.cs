@@ -17,10 +17,15 @@ public class PickUpObj : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+<<<<<<< HEAD
         pos = GameObject.FindGameObjectWithTag("hand").transform;
         isHand = false;
     }   
 
+=======
+        pos = GameObject.FindGameObjectWithTag("hand").transform; // ---добавлено---
+    }
+>>>>>>> 6369c2329c114e1dbdd7301a6c6855f29d191660
     void OnMouseDown()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
