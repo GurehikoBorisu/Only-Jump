@@ -32,8 +32,7 @@ public class Laser : MonoBehaviour
             Debug.DrawRay(point.position, point.right * hitInfo.distance, Color.red);
 
             impactLight.enabled = true;
-            if(impactLight.enabled)
-                impactEffect.Play();
+            impactEffect.Play();
 
             lineRenderer.SetPosition(0, point.position);
             lineRenderer.SetPosition(1, hitInfo.point);
@@ -52,8 +51,8 @@ public class Laser : MonoBehaviour
             lineRenderer.SetPosition(1, point.position + point.right * 100);
 
             impactLight.enabled = false;
-            if(!impactLight.enabled)
-                impactEffect.Stop();
+
+            impactEffect.Stop();
         }
 
     }
