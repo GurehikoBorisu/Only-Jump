@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR;
+
 
 public class PickUpObj : MonoBehaviour
 {
@@ -20,6 +19,7 @@ public class PickUpObj : MonoBehaviour
         pos = GameObject.FindGameObjectWithTag("hand").transform;
         isHand = false;
     }   
+
     void OnMouseDown()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

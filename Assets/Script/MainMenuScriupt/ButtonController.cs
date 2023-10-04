@@ -24,12 +24,12 @@ public class ButtonController : MonoBehaviour
 
     void Start()
     {
-        TimeText.text = ((int)TimerGame.timeGame).ToString() + "секунд/second";
+        TimeText.text = ((int)TimerGame.timeGame / 60).ToString() + "хвилин/minutes";
     }
 
     void Update()
     {
-        TimeText.text = ((int)TimerGame.timeGame).ToString() + "секунд/second";
+        TimeText.text = ((int)TimerGame.timeGame / 60).ToString() + "хвилин/minutes";
     }
 
     public void Play()
