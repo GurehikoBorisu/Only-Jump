@@ -20,7 +20,7 @@ public class PickUpObj : MonoBehaviour
         pos = GameObject.FindGameObjectWithTag("hand").transform;
         isHand = false;
     }   
-    
+
     void OnMouseDown()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

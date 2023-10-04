@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/LogicGame.unity
     guid: e59e7ad228060904d9cfe600b68eac06
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: aafe885035f5f404fa60a7a0275fbdd0
   m_configObjects: {}
