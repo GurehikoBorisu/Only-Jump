@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 public class PickUpObj : MonoBehaviour
@@ -9,9 +8,9 @@ public class PickUpObj : MonoBehaviour
     private float distance = 3f;    
     private float distanceView = 3f;
     static bool isHand;
+    private float distance = 15f;
     public Transform pos;
     private Rigidbody rb;
-    public GameObject rayText;
 
     public Vector3 vector;
 
@@ -29,7 +28,6 @@ public class PickUpObj : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, distance) && !isHand)
         {
-            rayText.SetActive(false);
             rb.isKinematic = true;
             isHand = true;
             rb.MovePosition(pos.position);
@@ -63,7 +61,6 @@ public class PickUpObj : MonoBehaviour
                 rb.useGravity = true;
                 isHand = false;
                 rb.isKinematic = false;
-                rayText.SetActive(false);
                 rb.AddForce(Camera.main.transform.forward * 500);
             }
         }
