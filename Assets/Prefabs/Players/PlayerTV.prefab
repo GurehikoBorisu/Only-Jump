@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 7761987513364221177}
   - component: {fileID: 7761987513364221176}
   - component: {fileID: 6057022496647624498}
+  - component: {fileID: 1332131095}
   m_Layer: 0
   m_Name: PlayerTV
   m_TagString: Untagged
@@ -300,6 +301,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1332131095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7761987513364221127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b93e6ac6f5bb94688fc9ee638a7f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 0}
+  healths: 100
 --- !u!1 &7761987513381300321
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7761987513676293443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.045, y: -0.4, z: 1.372}
+  m_LocalPosition: {x: -0.22, y: -0.4, z: 1.668}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
