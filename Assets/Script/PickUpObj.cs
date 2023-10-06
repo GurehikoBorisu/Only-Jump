@@ -13,11 +13,15 @@ public class PickUpObj : MonoBehaviour
     private Rigidbody rb;
     public GameObject rayText;
 
+    public Vector3 vector;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         pos = GameObject.FindGameObjectWithTag("hand").transform;
         isHand = false;
+
+        vector = new Vector3();
     }   
 
     void OnMouseDown()
