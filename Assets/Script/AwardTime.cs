@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,43 +13,43 @@ public class AwardTime : MonoBehaviour
 
     public bool isTime = true;
 
-    private void Awake()
+    private void Start()
     {
-        if (PlayerPrefs.HasKey("time"))
-            time = PlayerPrefs.GetFloat("time");
+        //time = 0;
+        currentTime = 0;
     }
 
     private void Update()
     {
-        if (isTime) 
+        if (isTime == true)
         {
             time += Time.deltaTime;
-            PlayerPrefs.SetFloat("time", time);
+            timeText.text = time + "секунд/second".ToString();
 
-            currentTime += Time.time;
-        }
-        else
-        {
-
+            currentTime += Time.deltaTime;
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Finish")
+        if (other.gameObject.tag == "Finish")
         {
-            isTime = false;
+            if (PlayerPrefs.HasKey("time"))
+                time = PlayerPrefs.GetFloat("time");
 
+            isTime = false;
             if (time >= currentTime)
             {
-                timeText.text = time.ToString();
+                time = currentTime;
+                float res = ((float)(int)(time * 100)) / 100;
+                timeText.text = res + "секунд/second".ToString();
                 PlayerPrefs.SetFloat("time", time);
             }
             else
             {
-               time = currentTime;
-               timeText.text = time.ToString();
-               PlayerPrefs.SetFloat("time", time);
+                float res = ((float)(int)(time * 100)) / 100;
+                timeText.text = res + "секунд/second".ToString();
+                PlayerPrefs.SetFloat("time", time);
             }
         }
     }
