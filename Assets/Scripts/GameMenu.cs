@@ -64,7 +64,7 @@ public class GameMenu : MonoBehaviour
     IEnumerator CloseMenu()
     {
         float startTime = Time.time;
-        float duration = 0.75f;
+        float duration = 1;
         while (Time.time - startTime < duration)
         {
             float t = (Time.time - startTime) / duration;
@@ -86,16 +86,16 @@ public class GameMenu : MonoBehaviour
             yield return null;
         }
         blackScreenColor.color = Color.black;
-        //SceneManager.LoadScene(levelTitle);
+        SceneManager.LoadScene(levelTitle);
     }
     IEnumerator OpenLevel()
     {
         float startTime = Time.time;
-        float duration = 10;
+        float duration = 1;
         while (Time.time - startTime < duration)
         {
             float t = (Time.time - startTime) / duration;
-            blackScreenColor.color = Color.Lerp(blackScreenColor.color, new Color(0, 0, 0, 0), t);
+            blackScreenColor.color = Color.Lerp(blackScreenColor.color, new Color(0,0,0,0), t);
             yield return null;
         }
         blackScreenColor.color = new Color(0, 0, 0, 0);
