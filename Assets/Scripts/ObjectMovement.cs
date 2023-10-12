@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectMovement : MonoBehaviour
 {
-    public List<Vector3> position = new List<Vector3>();
+    public List<Vector3> positions = new List<Vector3>();
     public float delay;
     public float duration;
     void Start()
@@ -20,7 +20,7 @@ public class ObjectMovement : MonoBehaviour
         while (true)
         {
             startPositon = transform.position;
-            targetPosition = position[i];
+            targetPosition = positions[i];
             startTime = Time.time;
             while (Time.time - startTime < duration)
             {
@@ -30,7 +30,7 @@ public class ObjectMovement : MonoBehaviour
             }
             transform.position = targetPosition;
             i++;
-            if (i >= position.Count)
+            if (i >= positions.Count)
             {
                 i = 0;
             }

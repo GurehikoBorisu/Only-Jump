@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotateObject : MonoBehaviour
 {
-    public List<Quaternion> rotate = new List<Quaternion>();
+    public List<Quaternion> rotation = new List<Quaternion>();
     void Start()
     {
         StartCoroutine("Rotate");
@@ -19,7 +19,7 @@ public class RotateObject : MonoBehaviour
         while (true)
         {
             startRotation = transform.rotation;
-            targetRotation = rotate[i];
+            targetRotation = rotation[i];
             startTime = Time.time;
             while (Time.time - startTime < duration)
             {
@@ -29,7 +29,7 @@ public class RotateObject : MonoBehaviour
             }
             transform.rotation = targetRotation;
             i++;
-            if (i >= rotate.Count)
+            if (i >= rotation.Count)
             {
                 i = 0;
             }
