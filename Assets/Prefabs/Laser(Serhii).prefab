@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3350887927207257546}
   - component: {fileID: 3350887927207257547}
   m_Layer: 0
-  m_Name: Lazer(Serhii)
+  m_Name: Laser(Serhii)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3350887927207257556}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -44.84714, y: -125.35, z: -226.02263}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 15, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
