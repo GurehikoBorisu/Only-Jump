@@ -247,6 +247,7 @@ MonoBehaviour:
   posX: 0
   posY: 0
   posZ: 0
+  boxSize: {x: 9, y: 2, z: 5}
 --- !u!1 &5043562829062608663
 GameObject:
   m_ObjectHideFlags: 0

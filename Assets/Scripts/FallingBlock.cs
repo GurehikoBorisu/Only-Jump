@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class FallingBlock : MonoBehaviour
 {
+    public float sphereRadius;
     Rigidbody rb;
     public float delay;
+    bool playerDetected = false;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
-    private void OnCollisionEnter(Collision collision)
+
+    void OnDrawGizmosSelected()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position + new Vector3(0, 2, 0), sphereRadius);
+    }
+
+    private void Update()
+    {
+        if (Physics.CheckSphere(transform.position + new Vector3(0,2,0), sphereRadius) && !playerDetected)
         {
             StartCoroutine("Fall");
+            playerDetected = true;
         }
     }
 

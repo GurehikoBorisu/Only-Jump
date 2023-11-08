@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3285116123515839617}
   - component: {fileID: 273134665544814018}
   - component: {fileID: 8808958383636703263}
-  - component: {fileID: 9206599988863000356}
-  - component: {fileID: 9206599988863000355}
-  m_Layer: 0
+  - component: {fileID: 1653490777920654493}
+  - component: {fileID: 1653490777920654470}
+  m_Layer: 7
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9206599988863000356
+--- !u!114 &1653490777920654493
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,10 +108,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3886869222180759566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6613266c02ca07245941adb633048679, type: 3}
+  m_Script: {fileID: 11500000, guid: 4fb945e0c4fdf354db6f2fa31412f6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9206599988863000355
+  _waypointPath: {fileID: 1653490777920654470}
+  _targetTime: 0
+  boxVolume: {x: 2, y: 1, z: 2}
+--- !u!114 &1653490777920654470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,9 +123,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3886869222180759566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42de2e756e181384aad0bf1a1bd7649a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f2d60b5ec7550348889e310fa3331a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positions: []
-  delay: 0
-  duration: 0
+  positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: -10, y: 0, z: 0}
