@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ButtonTrue : MonoBehaviour
+public class ButtonOnDoors : MonoBehaviour
 {
     public GameObject[] doors;
 
