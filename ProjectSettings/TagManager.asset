@@ -6,6 +6,10 @@ TagManager:
   tags:
   - hand
   - Platform
+  - Obj
+  - FalseButton
+  - ButtonTrue
+  - DoorsOn
   layers:
   - Default
   - TransparentFX
