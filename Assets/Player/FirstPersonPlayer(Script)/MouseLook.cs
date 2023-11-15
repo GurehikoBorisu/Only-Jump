@@ -12,10 +12,18 @@ public class MouseLook : MonoBehaviour
 
     float xRotation = 0f;
 
+    private void Awake()
+    {
+        if (PlayerPrefs.HasKey("Sensitivity"))
+            mouseSensitivity = PlayerPrefs.GetFloat("Sensitivity");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.lockState = CursorLockMode.Locked;
+
+        PlayerPrefs.SetFloat("Sensitivity", mouseSensitivity);
     }
 
     // Update is called once per frame
