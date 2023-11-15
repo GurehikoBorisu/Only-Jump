@@ -7,16 +7,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Animator anim;
-    public Color color;
     Vector3 velocity;
     public float gravity;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        GroundCheckRadius = GroundCheck.GetComponent<SphereCollider>().radius;
-        TopCheckRadius = TopCheck.GetComponent<SphereCollider>().radius;
         realSpeed = moveSpeed;
     }
 
@@ -28,8 +26,10 @@ public class PlayerMovement : MonoBehaviour
         Run();
         SquatCheck();
         CheckingGround();
+        ChangeGravity();
     }
 
+    [Header("Move")]
     public Vector3 moveVector;
     public float moveSpeed = 10f;
     private float realSpeed;
@@ -46,11 +46,32 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * moveVector.x + transform.forward * moveVector.z;
         Vector3 moveInput = new Vector3(moveVector.x, 0, moveVector.z).normalized;
 
+        if(moveVector != Vector3.zero && !footstepSound.isPlaying && isGround)
+        {
+            PlayFootStepSound();
+        }
+
         controller.Move(move * moveSpeed * Time.deltaTime);
         anim.SetFloat("Speed", Mathf.Abs(moveInput.magnitude));
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    [Header("Audio")]
+
+    public AudioSource footstepSound;
+    public AudioClip[] footstepSounds;
+    private void PlayFootStepSound()
+    {
+        if (footstepSounds.Length > 0)
+        {
+            int randomIndex = Random.Range(0, footstepSounds.Length);
+            AudioClip randomClip = footstepSounds[randomIndex];
+            footstepSound.clip = randomClip;
+
+            footstepSound.Play();
+        }
     }
 
     public void Run()
@@ -67,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    [Header("Jump")]
     public float jumpHeight = 3f;
     void Jump()
     {
@@ -78,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    [Header("SquatCheck")]
     public Transform TopCheck;
     public float TopCheckRadius;
     public LayerMask Roof;
@@ -106,14 +129,76 @@ public class PlayerMovement : MonoBehaviour
             controller.center = getUpPos;
         }
     }
+
+    [Header("CheckingGround")]
     public bool isGround;
     public Transform GroundCheck;
     public LayerMask groundMask;
-    private float GroundCheckRadius;
+    public float GroundCheckRadius;
 
     void CheckingGround()
     {
         isGround = Physics.CheckSphere(GroundCheck.position, GroundCheckRadius, groundMask);
         anim.SetBool("onGround", isGround);
+    }
+
+    [Header("ChangeGravity")]
+    public bool isRotating = false;
+    public void ChangeGravity()
+    {
+        if (Input.GetKeyDown(KeyCode.G)) 
+        {
+            if (!isRotating)
+            {
+                isRotating = true;
+                StartCoroutine(ChangeGravityAndRotateObject());
+            }
+        }
+    }
+
+    private System.Collections.IEnumerator ChangeGravityAndRotateObject()
+    {
+        gravity = (gravity == 9.8f) ? -9.8f : 9.8f;
+
+        Physics.gravity = new Vector3(0, gravity, 0);
+
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + 180f);
+
+        float startTime = Time.time;
+        float duration = 1.0f; 
+
+        while (Time.time - startTime < duration)
+        {
+            float t = (Time.time - startTime) / duration;
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
+            yield return null;
+        }
+
+        transform.rotation = targetRotation;
+        isRotating = false;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (GroundCheck == null)
+            return;
+        if (TopCheck == null)
+            return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(GroundCheck.position, GroundCheckRadius);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(TopCheck.position, TopCheckRadius);
+    }
+
+    
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.collider.CompareTag("Point"))
+        {
+            isRotating = true;
+        }
     }
 }
