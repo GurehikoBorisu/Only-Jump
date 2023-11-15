@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8115816594061514224}
   - component: {fileID: 6844452199762033843}
   - component: {fileID: 2812932818681551214}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 8174752817757565106}
   - component: {fileID: 6858915515447187953}
   - component: {fileID: 2799595402903206956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3581845709890306420}
   - component: {fileID: 4858626463411815964}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 1706072571981507764}
   - component: {fileID: 4174945454738081271}
   - component: {fileID: 4613243721061900330}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 1876677317642901221}
   - component: {fileID: 3771202982227902374}
   - component: {fileID: 5594573943197391483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 1773550873186303756}
   - component: {fileID: 3945617461376669263}
   - component: {fileID: 5707270537463919506}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 3392515681406837240}
   - component: {fileID: 92867207906150587}
   - component: {fileID: 8699833280226061670}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
