@@ -9,6 +9,7 @@ public class Checkpoint : MonoBehaviour
     public float posY;
     public float posZ;
     public Vector3 boxSize;
+    public LayerMask layer;
     bool playerDetected = false;
     void OnDrawGizmosSelected()
     {
@@ -17,18 +18,12 @@ public class Checkpoint : MonoBehaviour
     }
     private void Update()
     {
-        if (Physics.CheckBox(transform.position + new Vector3(0, 2, 0), boxSize) && !playerDetected)
+        if (Physics.CheckBox(transform.position + new Vector3(0, 2, 0), boxSize, new Quaternion(0,0,0,0), layer))
         {
-            Collider[] colliders = Physics.OverlapBox(transform.position, boxSize);
-            foreach (Collider collider in colliders)
-            {
-                if (collider.CompareTag("Player"))
-                {
-                    PlayerPrefs.SetFloat("posX", posX);
-                    PlayerPrefs.SetFloat("posY", posY);
-                    PlayerPrefs.SetFloat("posZ", posZ);
-                }
-            }
+            PlayerPrefs.SetFloat("posX", posX);
+            PlayerPrefs.SetFloat("posY", posY);
+            PlayerPrefs.SetFloat("posZ", posZ);
+            Debug.Log($"{PlayerPrefs.GetFloat("posX")},{PlayerPrefs.GetFloat("posY")},{PlayerPrefs.GetFloat("posZ")}");
         }
     }
 }

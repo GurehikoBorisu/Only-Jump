@@ -8,6 +8,7 @@ public class FallingBlock : MonoBehaviour
     Rigidbody rb;
     public float delay;
     bool playerDetected = false;
+    public LayerMask layer;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -16,12 +17,12 @@ public class FallingBlock : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position + new Vector3(0, 2, 0), sphereRadius);
+        Gizmos.DrawWireSphere(transform.position, sphereRadius);
     }
 
     private void Update()
     {
-        if (Physics.CheckSphere(transform.position + new Vector3(0,2,0), sphereRadius) && !playerDetected)
+        if (Physics.CheckSphere(transform.position, sphereRadius, layer) && !playerDetected)
         {
             StartCoroutine("Fall");
             playerDetected = true;
@@ -32,5 +33,7 @@ public class FallingBlock : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         rb.isKinematic = false;
+        yield return new WaitForSeconds(delay/2);
+        rb.GetComponent<Collider>().isTrigger = true;
     }
 }

@@ -247,7 +247,10 @@ MonoBehaviour:
   posX: 0
   posY: 0
   posZ: 0
-  boxSize: {x: 9, y: 2, z: 5}
+  boxSize: {x: 9, y: 3, z: 9}
+  layer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &5043562829062608663
 GameObject:
   m_ObjectHideFlags: 0

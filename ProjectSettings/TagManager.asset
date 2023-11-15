@@ -10,6 +10,8 @@ TagManager:
   - FalseButton
   - ButtonTrue
   - DoorsOn
+  - DeathBlock
+  - Laser
   layers:
   - Default
   - TransparentFX

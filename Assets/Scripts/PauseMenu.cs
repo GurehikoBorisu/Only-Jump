@@ -6,6 +6,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject player;
     public List<Scene> levels = new List<Scene>();
     public int nextLevelNumber;
     bool isOpen;
@@ -20,11 +21,19 @@ public class PauseMenu : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && !isOpen)
         {
             pauseMenu.SetActive(true);
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponentInChildren<MouseLook>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             isOpen = true;
         }
         else if (Input.GetKeyDown(KeyCode.E) && isOpen)
         {
             pauseMenu.SetActive(false);
+            player.GetComponent<PlayerMovement>().enabled = true;
+            player.GetComponentInChildren<MouseLook>().enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             isOpen = false;
         }
     }
@@ -35,6 +44,10 @@ public class PauseMenu : MonoBehaviour
     public void Continue()
     {
         pauseMenu.SetActive(false);
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponentInChildren<MouseLook>().enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         isOpen = false;
     }
     public void Exit()
