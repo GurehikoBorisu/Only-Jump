@@ -278,6 +278,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1702785639387566422, guid: d2be1b08162ab5c4fb0dd4a7c7d9928f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1858373631163105988, guid: d2be1b08162ab5c4fb0dd4a7c7d9928f, type: 3}
       propertyPath: delay
       value: 1.75
