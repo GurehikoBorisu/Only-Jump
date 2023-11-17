@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3003095824353939042}
   - component: {fileID: 2025673187236356260}
   - component: {fileID: 1634101768697225081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RoofComponent (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 746466251045762209}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 382886625726274222}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 5149208561332678617}
   - component: {fileID: 6745170080791810386}
   - component: {fileID: 5763571228282744457}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RoofComponent (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 4730729339725394247}
   - component: {fileID: 8069219591960434692}
   - component: {fileID: 1589289129530965465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 5663040880663945983}
   - component: {fileID: 6974497607935085500}
   - component: {fileID: 1819329878708842081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 5476533972765002518}
   - component: {fileID: 7088036427374617173}
   - component: {fileID: 1992888938276636552}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 3943256868186729650}
   - component: {fileID: 770199422232468357}
   - component: {fileID: 1630314730624020400}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 7909425834489488855}
   - component: {fileID: 3596011381260828046}
   - component: {fileID: 6672865353762023680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 7262772901710021575}
   - component: {fileID: 8027411034096981433}
   - component: {fileID: 1399363935251755698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RoofComponent (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ GameObject:
   - component: {fileID: 498502488978869928}
   - component: {fileID: 2523124800273236674}
   - component: {fileID: 5233252415847574300}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'RoofComponent '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -955,7 +955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5263200855798597956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 1147373708863601282}
   - component: {fileID: 5141409618365531931}
   - component: {fileID: 341000012772762941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 2786301567172003843}
   - component: {fileID: 646165053025018176}
   - component: {fileID: 8143152219607942301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 2844389105934478657}
   - component: {fileID: 658653507783623682}
   - component: {fileID: 8129537864942461407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

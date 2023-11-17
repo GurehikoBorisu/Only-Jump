@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    public Vector3 mouseVector;
 
     public float mouseSensitivity = 100f;
 
@@ -12,31 +11,30 @@ public class MouseLook : MonoBehaviour
 
     float xRotation = 0f;
 
-    private void Awake()
+/*   private void Awake()
     {
         if (PlayerPrefs.HasKey("Sensitivity"))
             mouseSensitivity = PlayerPrefs.GetFloat("Sensitivity");
-    }
+    }*/
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
 
-        PlayerPrefs.SetFloat("Sensitivity", mouseSensitivity);
+       // PlayerPrefs.SetFloat("Sensitivity", mouseSensitivity);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        mouseVector.x = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        mouseVector.y= Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        xRotation -= mouseVector.y;
+        xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90);
 
-        transform.localRotation = Quaternion.Euler(xRotation,0,0);
-
-        player.Rotate(Vector3.up * mouseVector.x);
+        transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        player.Rotate(Vector3.up * mouseX);
     }
 }
