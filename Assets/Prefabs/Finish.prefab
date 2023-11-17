@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6220413782665246893}
   - component: {fileID: 8339435730452133063}
   - component: {fileID: 1736260148583980313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'RoofComponent '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 585876829321305798}
   - component: {fileID: 2964246160444196781}
   - component: {fileID: 9199653902892187494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 6869144403036900487}
   - component: {fileID: 1720837888364196126}
   - component: {fileID: 6053728004938797880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 8508072364425723398}
   - component: {fileID: 6363572592449460037}
   - component: {fileID: 2430283481346290328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 8629210168585378628}
   - component: {fileID: 6457125987066671623}
   - component: {fileID: 2335604186822268890}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6680583016774179310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1570390579727766612}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 1233631682017806146}
   - component: {fileID: 4558751443915632129}
   - component: {fileID: 5095288845157157852}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 2175090816655168762}
   - component: {fileID: 3490910525771431353}
   - component: {fileID: 5298448528421328996}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 2069648800297467155}
   - component: {fileID: 3667499839316169808}
   - component: {fileID: 5408957093883916685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ GameObject:
   - component: {fileID: 8725006856048359527}
   - component: {fileID: 5522806463108404897}
   - component: {fileID: 5049994066885241212}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RoofComponent (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -955,7 +955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6190225605429488811}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 1715301740081650140}
   - component: {fileID: 946873355867203415}
   - component: {fileID: 2252927093417121932}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RoofComponent (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1090,7 @@ GameObject:
   - component: {fileID: 3779326334234080706}
   - component: {fileID: 4602476450546295740}
   - component: {fileID: 4887489895903462583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RoofComponent (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 7350176979694181047}
   - component: {fileID: 6487466550603279744}
   - component: {fileID: 5050886640476690869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1284,7 +1284,7 @@ GameObject:
   - component: {fileID: 4430342313314898898}
   - component: {fileID: 7016548244199000971}
   - component: {fileID: 874427925690081029}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colon (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
