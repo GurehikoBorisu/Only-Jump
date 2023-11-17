@@ -5,6 +5,8 @@ using UnityEngine;
 public class RotateObject : MonoBehaviour
 {
     public List<Quaternion> rotation = new List<Quaternion>();
+    public float delay;
+    public float duration;
     void Start()
     {
         StartCoroutine("Rotate");
@@ -14,7 +16,6 @@ public class RotateObject : MonoBehaviour
         Quaternion startRotation;
         Quaternion targetRotation;
         float startTime;
-        float duration = 3;
         int i = 0;
         while (true)
         {
@@ -33,6 +34,7 @@ public class RotateObject : MonoBehaviour
             {
                 i = 0;
             }
+            yield return new WaitForSeconds(delay);
         }
     }
 }

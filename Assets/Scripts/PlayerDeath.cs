@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerDeath : MonoBehaviour
 {
     public GameObject loseMenu;
-    private void Start()
+    private void Awake()
     {
-        transform.position = new Vector3(PlayerPrefs.GetFloat("posX"), PlayerPrefs.GetFloat("posY"), PlayerPrefs.GetFloat("posZ"));
+        //transform.position = new Vector3(PlayerPrefs.GetFloat("posX"), PlayerPrefs.GetFloat("posY"), PlayerPrefs.GetFloat("posZ"));
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {

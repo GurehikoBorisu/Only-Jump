@@ -10,7 +10,6 @@ public class Checkpoint : MonoBehaviour
     public float posZ;
     public Vector3 boxSize;
     public LayerMask layer;
-    bool playerDetected = false;
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
