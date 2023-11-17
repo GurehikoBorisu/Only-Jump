@@ -7,25 +7,38 @@ using UnityEngine.SceneManagement;
 public class PausePanel : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-
+    
     public GameObject pauseMenuUI;
 
     public AudioMixerSnapshot Normal;
     public AudioMixerSnapshot InMenu;
-
     // Update is called once per frame
-    void Update()
+    private void Update()
+    {
+        ActiveMenu();
+    }
+    void ActiveMenu()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            GameIsPaused = !GameIsPaused;
+        }
+
+        if (GameIsPaused)
+        {
+            pauseMenuUI.SetActive(true);
+           // Time.timeScale = 0;
+            InMenu.TransitionTo(1.5f);
+            GameIsPaused = true;
+         //   Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            pauseMenuUI.SetActive(false);
+            //Time.timeScale = 1;
+            Normal.TransitionTo(1.5f);
+            GameIsPaused = false;
+          //  Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
@@ -36,15 +49,6 @@ public class PausePanel : MonoBehaviour
         Normal.TransitionTo(1.5f);
         GameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    public void Pause()
-    {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0;
-        InMenu.TransitionTo(1.5f);
-        GameIsPaused = true;
-        Cursor.lockState = CursorLockMode.None;
     }
 
     public void LoadMenu()
