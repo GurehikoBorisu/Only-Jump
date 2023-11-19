@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Animator anim;
+    public Camera cam;
+
     Vector3 velocity;
     public float gravity;
 
@@ -16,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         realSpeed = moveSpeed;
+        cam = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame
@@ -54,7 +57,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * moveSpeed * Time.deltaTime);
         anim.SetFloat("Speed", Mathf.Abs(moveInput.magnitude));
 
-        velocity.y += gravity * Time.deltaTime;
+        if (!isRotating)
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
         controller.Move(velocity * Time.deltaTime);
     }
 
@@ -112,12 +118,15 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 squatPos = new Vector3(0, -1.2f, 0);
     public Vector3 getUpPos = new Vector3(0, 0, 0);
 
+    public float cameraSquatPosY = -0.1f;
+    public float cameragetUpPosY = 0.2f;
     void SquatCheck()
     {
         if (Input.GetKey(KeyCode.C) && isGround)
         {
             jumpLock = true;
             anim.SetBool("squat", true);
+            cam.transform.position = new Vector3(transform.position.x, transform.position.y + cameraSquatPosY, transform.position.z); ;
             controller.height = squatHeight;
             controller.center = squatPos;
         }
@@ -125,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpLock = false;
             anim.SetBool("squat", false);
+            cam.transform.position = new Vector3(transform.position.x, transform.position.y + cameragetUpPosY, transform.position.z);
             controller.height = getUpHeight;
             controller.center = getUpPos;
         }
@@ -143,14 +153,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
     [Header("ChangeGravity")]
-    public bool isRotating = false;
+    public bool isRotating = true;
+
     public void ChangeGravity()
     {
-        if (Input.GetKeyDown(KeyCode.G)) 
+        if (Input.GetKeyDown(KeyCode.G) && isGround && !jumpLock) 
         {
-            if (!isRotating)
+            if (isRotating)
             {
-                isRotating = true;
+                isRotating = false;
                 StartCoroutine(ChangeGravityAndRotateObject());
             }
         }
@@ -159,6 +170,8 @@ public class PlayerMovement : MonoBehaviour
     private System.Collections.IEnumerator ChangeGravityAndRotateObject()
     {
         gravity = (gravity == 9.8f) ? -9.8f : 9.8f;
+
+        velocity.y += gravity * Time.deltaTime;
 
         Physics.gravity = new Vector3(0, gravity, 0);
 
@@ -176,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.rotation = targetRotation;
-        isRotating = false;
+        isRotating = true;
     }
 
     private void OnDrawGizmosSelected()
@@ -191,14 +204,5 @@ public class PlayerMovement : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(TopCheck.position, TopCheckRadius);
-    }
-
-    
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.collider.CompareTag("Point"))
-        {
-            isRotating = true;
-        }
     }
 }
