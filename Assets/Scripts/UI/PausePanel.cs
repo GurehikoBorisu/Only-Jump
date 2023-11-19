@@ -46,7 +46,10 @@ public class PausePanel : MonoBehaviour
         GameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
     }
-
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     public void LoadMenu()
     {
         Time.timeScale = 1;
