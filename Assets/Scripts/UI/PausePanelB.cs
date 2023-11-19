@@ -59,4 +59,8 @@ public class PausePanelB : MonoBehaviour
         Debug.Log("QUIT");
         Application.Quit();
     }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
