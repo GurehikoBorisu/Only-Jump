@@ -12,8 +12,9 @@ TagManager:
   - DoorsOn
   - DeathBlock
   - Laser
-  - LoadLevelButton
   - Point
+  - GravityOff
+  - GravityOn
   layers:
   - Default
   - TransparentFX

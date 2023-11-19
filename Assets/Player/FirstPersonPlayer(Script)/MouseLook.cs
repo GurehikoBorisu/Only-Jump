@@ -20,7 +20,7 @@ public class MouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 
        // PlayerPrefs.SetFloat("Sensitivity", mouseSensitivity);
     }
