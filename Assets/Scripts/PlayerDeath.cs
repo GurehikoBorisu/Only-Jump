@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-    public GameObject loseMenu;
+    public GameObject losePanel;
     private void Awake()
     {
-        //transform.position = new Vector3(PlayerPrefs.GetFloat("posX"), PlayerPrefs.GetFloat("posY"), PlayerPrefs.GetFloat("posZ"));
+
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -17,7 +17,9 @@ public class PlayerDeath : MonoBehaviour
             Destroy(gameObject);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            loseMenu.SetActive(true);
+            losePanel.SetActive(true);
+            GameObject canvas = losePanel.transform.parent.gameObject;
+            canvas.GetComponent<PausePanelB>().enabled = false;
         }
     }
 }

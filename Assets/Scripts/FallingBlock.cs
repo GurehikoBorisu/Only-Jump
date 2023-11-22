@@ -35,5 +35,7 @@ public class FallingBlock : MonoBehaviour
         rb.isKinematic = false;
         yield return new WaitForSeconds(delay/2);
         rb.GetComponent<Collider>().isTrigger = true;
+        yield return new WaitForSeconds(delay*3);
+        Destroy(gameObject);
     }
 }
