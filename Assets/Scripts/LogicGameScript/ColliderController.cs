@@ -12,31 +12,31 @@ public class ColliderController : MonoBehaviour
 
     void Update()
     {
-        if (isButtons_1)
+        if (count == 2)
         {
-            count = 0;
+           
             Destroy(door[0]);
         }
 
-        if (count == -1)
+        if (count == 1)
         {
             Destroy(door[1]);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "Obj")
+        if (collision.gameObject.tag == "Obj")
         {
-            isButtons_1 = true;
+            count = 2;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision collision)
     {
-        if (other.gameObject.tag == "Obj")
+        if (collision.gameObject.tag == "Obj")
         {
-            count = -1;
+            count = 1;
         }
     }
 }
