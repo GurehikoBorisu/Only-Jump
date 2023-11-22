@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Animator anim;
+    public Camera cam;
+
     Vector3 velocity;
     public float gravity;
 
@@ -16,12 +18,23 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         realSpeed = moveSpeed;
+        cam = FindObjectOfType<Camera>();
+        transform.position = new Vector3(PlayerPrefs.GetFloat("posX"), PlayerPrefs.GetFloat("posY"), PlayerPrefs.GetFloat("posZ"));
+        Debug.Log($"{PlayerPrefs.GetFloat("posX")},{PlayerPrefs.GetFloat("posY")},{PlayerPrefs.GetFloat("posZ")}");
     }
 
     // Update is called once per frame
+    private void FixedUpdate()
+    {
+        velocity.y += gravity * Time.deltaTime;
+    }
     void Update()
     {
-        Jump();
+        if (!isRotating)
+        {
+            Jump();
+        }
+        //Jump();
         Walk();
         Run();
         SquatCheck();
@@ -54,7 +67,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * moveSpeed * Time.deltaTime);
         anim.SetFloat("Speed", Mathf.Abs(moveInput.magnitude));
 
-        velocity.y += gravity * Time.deltaTime;
+        //if (!isRotating)
+        //{
+        //    velocity.y += gravity * Time.deltaTime;
+        //}
         controller.Move(velocity * Time.deltaTime);
     }
 
@@ -112,12 +128,15 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 squatPos = new Vector3(0, -1.2f, 0);
     public Vector3 getUpPos = new Vector3(0, 0, 0);
 
+    public float cameraSquatPosY = -0.1f;
+    public float cameragetUpPosY = 0.2f;
     void SquatCheck()
     {
         if (Input.GetKey(KeyCode.C) && isGround)
         {
             jumpLock = true;
             anim.SetBool("squat", true);
+            cam.transform.position = new Vector3(transform.position.x, transform.position.y + cameraSquatPosY, transform.position.z); ;
             controller.height = squatHeight;
             controller.center = squatPos;
         }
@@ -125,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpLock = false;
             anim.SetBool("squat", false);
+            cam.transform.position = new Vector3(transform.position.x, transform.position.y + cameragetUpPosY, transform.position.z);
             controller.height = getUpHeight;
             controller.center = getUpPos;
         }
@@ -143,30 +163,38 @@ public class PlayerMovement : MonoBehaviour
     }
 
     [Header("ChangeGravity")]
-    public bool isRotating = false;
+    public bool isRotating = true;
+
     public void ChangeGravity()
     {
-        if (Input.GetKeyDown(KeyCode.G)) 
+        if (Input.GetKeyDown(KeyCode.G) && isGround && !jumpLock) 
         {
-            if (!isRotating)
+            if (isRotating)
             {
-                isRotating = true;
-                StartCoroutine(ChangeGravityAndRotateObject());
+                //isRotating = false;
+                gravity = (gravity == 9.8f) ? -9.8f : 9.8f;
+                velocity.y = 0;
+                //StartCoroutine(ChangeGravityAndRotateObject());
+                StartCoroutine("ChangeGravityAndRotateObject");
             }
         }
     }
 
     private System.Collections.IEnumerator ChangeGravityAndRotateObject()
     {
-        gravity = (gravity == 9.8f) ? -9.8f : 9.8f;
+        //gravity = (gravity == 9.8f) ? -9.8f : 9.8f;
+
+        //velocity.y += gravity * Time.deltaTime;
 
         Physics.gravity = new Vector3(0, gravity, 0);
 
         Quaternion startRotation = transform.rotation;
-        Quaternion targetRotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + 180f);
+        Quaternion targetRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z + 180f);
+        //Quaternion targetRotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + 180f);
 
         float startTime = Time.time;
-        float duration = 1.0f; 
+        //float duration = 1.0f;
+        float duration = 0.35f;
 
         while (Time.time - startTime < duration)
         {
@@ -176,7 +204,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.rotation = targetRotation;
-        isRotating = false;
+        isRotating = true;
     }
 
     private void OnDrawGizmosSelected()
@@ -191,14 +219,5 @@ public class PlayerMovement : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(TopCheck.position, TopCheckRadius);
-    }
-
-    
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.collider.CompareTag("Point"))
-        {
-            isRotating = true;
-        }
     }
 }
