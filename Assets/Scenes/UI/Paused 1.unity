@@ -335,7 +335,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &592947782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,7 +1218,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875232444}
   m_CullTransparentMesh: 1
-=======
 >>>>>>> 4d50cb191fa2d026373a97a202d27f1e04cad0de
 --- !u!1 &2028734087
 GameObject:
