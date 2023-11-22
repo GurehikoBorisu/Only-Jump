@@ -19,12 +19,22 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         realSpeed = moveSpeed;
         cam = FindObjectOfType<Camera>();
+        transform.position = new Vector3(PlayerPrefs.GetFloat("posX"), PlayerPrefs.GetFloat("posY"), PlayerPrefs.GetFloat("posZ"));
+        Debug.Log($"{PlayerPrefs.GetFloat("posX")},{PlayerPrefs.GetFloat("posY")},{PlayerPrefs.GetFloat("posZ")}");
     }
 
     // Update is called once per frame
+    private void FixedUpdate()
+    {
+        velocity.y += gravity * Time.deltaTime;
+    }
     void Update()
     {
-        Jump();
+        if (!isRotating)
+        {
+            Jump();
+        }
+        //Jump();
         Walk();
         Run();
         SquatCheck();
@@ -57,10 +67,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * moveSpeed * Time.deltaTime);
         anim.SetFloat("Speed", Mathf.Abs(moveInput.magnitude));
 
-        if (!isRotating)
-        {
-            velocity.y += gravity * Time.deltaTime;
-        }
+        //if (!isRotating)
+        //{
+        //    velocity.y += gravity * Time.deltaTime;
+        //}
         controller.Move(velocity * Time.deltaTime);
     }
 
@@ -161,25 +171,30 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isRotating)
             {
-                isRotating = false;
-                StartCoroutine(ChangeGravityAndRotateObject());
+                //isRotating = false;
+                gravity = (gravity == 9.8f) ? -9.8f : 9.8f;
+                velocity.y = 0;
+                //StartCoroutine(ChangeGravityAndRotateObject());
+                StartCoroutine("ChangeGravityAndRotateObject");
             }
         }
     }
 
     private System.Collections.IEnumerator ChangeGravityAndRotateObject()
     {
-        gravity = (gravity == 9.8f) ? -9.8f : 9.8f;
+        //gravity = (gravity == 9.8f) ? -9.8f : 9.8f;
 
-        velocity.y += gravity * Time.deltaTime;
+        //velocity.y += gravity * Time.deltaTime;
 
         Physics.gravity = new Vector3(0, gravity, 0);
 
         Quaternion startRotation = transform.rotation;
-        Quaternion targetRotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + 180f);
+        Quaternion targetRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z + 180f);
+        //Quaternion targetRotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + 180f);
 
         float startTime = Time.time;
-        float duration = 1.0f; 
+        //float duration = 1.0f;
+        float duration = 0.35f;
 
         while (Time.time - startTime < duration)
         {

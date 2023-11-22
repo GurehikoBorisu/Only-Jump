@@ -59,4 +59,11 @@ public class PausePanelB : MonoBehaviour
         Debug.Log("QUIT");
         Application.Quit();
     }
+    public void Restart()
+    {
+        PlayerPrefs.SetFloat("posX", 0);
+        PlayerPrefs.SetFloat("posY", 0);
+        PlayerPrefs.SetFloat("posZ", 0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
