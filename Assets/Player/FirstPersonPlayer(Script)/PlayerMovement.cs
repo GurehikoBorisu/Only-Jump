@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         realSpeed = moveSpeed;
         cam = FindObjectOfType<Camera>();
-        transform.position = new Vector3(PlayerPrefs.GetFloat("posX"), PlayerPrefs.GetFloat("posY"), PlayerPrefs.GetFloat("posZ"));
+        //transform.position = new Vector3(PlayerPrefs.GetFloat("posX"), PlayerPrefs.GetFloat("posY"), PlayerPrefs.GetFloat("posZ"));
         Debug.Log($"{PlayerPrefs.GetFloat("posX")},{PlayerPrefs.GetFloat("posY")},{PlayerPrefs.GetFloat("posZ")}");
     }
 

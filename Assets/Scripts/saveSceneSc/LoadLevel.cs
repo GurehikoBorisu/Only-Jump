@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -5,7 +6,9 @@ using UnityEngine.UI;
 public class LoadLevel : MonoBehaviour
 {
     public Button[] butt;
+    public float x, y, z;
     public int sceneCount;
+    public int levelNumber;
 
     private void Start()
     {
@@ -57,29 +60,35 @@ public class LoadLevel : MonoBehaviour
                 break;
         }
     }
-
-    public void load1()
+    public void LevelLoad()
     {
-        SceneManager.LoadScene(sceneCount);
+        PlayerPrefs.SetFloat("posX", x);
+        PlayerPrefs.SetFloat("posY", y);
+        PlayerPrefs.SetFloat("posZ", z);
+        SceneManager.LoadScene(levelNumber);
     }
+    //public void load1()
+    //{
+    //    SceneManager.LoadScene(sceneCount);
+    //}
 
-    public void load2()
-    {
-        SceneManager.LoadScene(sceneCount);
-    }
+    //public void load2()
+    //{
+    //    SceneManager.LoadScene(sceneCount);
+    //}
 
-    public void load3()
-    {
-        SceneManager.LoadScene(sceneCount);
-    }
+    //public void load3()
+    //{
+    //    SceneManager.LoadScene(sceneCount);
+    //}
 
-    public void load4()
-    {
-        SceneManager.LoadScene(sceneCount);
-    }
+    //public void load4()
+    //{
+    //    SceneManager.LoadScene(sceneCount);
+    //}
 
-    public void load5()
-    {
-        SceneManager.LoadScene(sceneCount);
-    }
+    //public void load5()
+    //{
+    //    SceneManager.LoadScene(sceneCount);
+    //}
 }
