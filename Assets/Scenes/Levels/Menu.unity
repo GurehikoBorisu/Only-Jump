@@ -668,7 +668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521afcf6b027cf5458a5ae5017284613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 399495326}
 --- !u!4 &80743151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c15e72f821381b24892d7f483a88a603, type: 3}
