@@ -78,7 +78,7 @@ public class LosePanel : MonoBehaviour
         Application.Quit();
     }
 
-    public void Restart()
+    public void Continue()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
