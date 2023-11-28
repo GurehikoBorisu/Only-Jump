@@ -15,6 +15,7 @@ TagManager:
   - Point
   - GravityOff
   - GravityOn
+  - Finish1
   layers:
   - Default
   - TransparentFX

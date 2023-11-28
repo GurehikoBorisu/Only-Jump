@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761987513364221176, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7761987513364221176, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
       propertyPath: isRotating
