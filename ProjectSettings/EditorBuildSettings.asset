@@ -9,9 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/Menu.unity
     guid: 3a9e7a53d58b5614686d560f1cbdc875
   - enabled: 1
-    path: Assets/Scenes/Levels/Level1.unity
-    guid: 543e03efd4e771040b03234bca32bdaf
+    path: Assets/Scenes/Levels/ChangeGravityLevel1.unity
+    guid: e3c661b4471ea2f4aa6622c05462e6a6
   - enabled: 1
-    path: Assets/Scenes/Levels/LaserGame.unity
+    path: Assets/Scenes/Levels/LaserGame2.unity
     guid: dc516b175eaa16e4092557564c06e4d3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Labirint3.unity
+    guid: b5b4587afeb29c549a7a1be3b9b4a56f
+  - enabled: 1
+    path: Assets/Scenes/Levels/LogicGame4.unity
+    guid: e59e7ad228060904d9cfe600b68eac06
+  - enabled: 1
+    path: Assets/Scenes/Levels/FinalLevel5.unity
+    guid: 84e13dbd36d5c0244ae3964140f8f59b
   m_configObjects: {}
