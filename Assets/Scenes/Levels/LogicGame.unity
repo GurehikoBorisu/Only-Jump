@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 1715483230}
 --- !u!1 &44759512
 GameObject:
@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4147c5ec5804174d964b5551c8af96d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
 --- !u!1 &172571621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,7 +3055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 288671840}
 --- !u!1 &427907558
 GameObject:
@@ -3496,7 +3496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 266766958}
 --- !u!1 &486363334
 GameObject:
@@ -4503,7 +4503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4147c5ec5804174d964b5551c8af96d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
 --- !u!1001 &647287786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7288,7 +7288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 1988220460}
 --- !u!1 &993952530
 GameObject:
@@ -8404,7 +8404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 1950460925}
 --- !u!1 &1214399282
 GameObject:
@@ -8859,15 +8859,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761987513364221178, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761987513364221178, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -158.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761987513364221178, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -178.22
       value: 108.4
       objectReference: {fileID: 0}
     - target: {fileID: 7761987513364221178, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
@@ -9498,7 +9489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 310886301}
 --- !u!1001 &1385117007
 PrefabInstance:
@@ -9714,7 +9705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 1734345017}
 --- !u!1 &1415604402
 GameObject:
@@ -13648,7 +13639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4147c5ec5804174d964b5551c8af96d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
 --- !u!1 &1913303879
 GameObject:
   m_ObjectHideFlags: 0
@@ -13759,7 +13750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 540193442}
 --- !u!1 &1950460925
 GameObject:
@@ -14568,7 +14559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 614911814}
 --- !u!1001 &2011973024
 PrefabInstance:
@@ -15356,7 +15347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38e77935d8aac48b7f3ebc483d2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 4
+  sceneCount: 0
   doors: {fileID: 522748998}
 --- !u!1 &2095501451
 GameObject:
