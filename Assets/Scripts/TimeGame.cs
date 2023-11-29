@@ -31,7 +31,5 @@ public class TimeGame : MonoBehaviour
 
         PlayerPrefs.SetInt("Minutes", minutes);
         PlayerPrefs.SetInt("Hourse", hourse);
-
     }
-
 }
