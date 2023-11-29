@@ -14,6 +14,7 @@ public class sensitivityController : MonoBehaviour
 
     private void Start()
     {
+        slider.value = currentSens;
         slider.maxValue = 500f;
     }
 
