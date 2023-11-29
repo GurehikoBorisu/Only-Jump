@@ -51,15 +51,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773b570daac00e44f9b5a69b4c60d142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPaused: {fileID: 0}
   keyMenuPaused: 27
-  pausePanelRect: {fileID: 0}
+  pausePanelRect: {fileID: 6478538277529655165}
   topPosY: 850
   middlePosY: 0
-  tweenDuraction: 0
-  canvasGroup: {fileID: 0}
-  Normal: {fileID: 0}
-  InMenu: {fileID: 0}
+  tweenDuraction: 0.4
+  canvasGroup: {fileID: 6478538278692571674}
+  Normal: {fileID: 24500006, guid: adb499db56f77c84fbf7ebcd367256fc, type: 2}
+  InMenu: {fileID: -8451620660015720928, guid: adb499db56f77c84fbf7ebcd367256fc, type: 2}
 --- !u!1 &6478538277529655164
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 public class PausePanelB : MonoBehaviour
 {
-    public GameObject menuPaused;
     [SerializeField] KeyCode keyMenuPaused;
 
     [SerializeField] RectTransform pausePanelRect;
@@ -16,15 +15,10 @@ public class PausePanelB : MonoBehaviour
     [SerializeField] float tweenDuraction;
     [SerializeField] CanvasGroup canvasGroup; // Dark panel canvas group
 
-    bool isMenuPaused = false;
+    public bool isMenuPaused = false;
 
     public AudioMixerSnapshot Normal;
     public AudioMixerSnapshot InMenu;
-
-    private void Start()
-    {
-        menuPaused.SetActive(false);
-    }
 
     private void Update()
     {
@@ -40,7 +34,6 @@ public class PausePanelB : MonoBehaviour
         if (isMenuPaused)
         {
             Time.timeScale = 0;
-            menuPaused.SetActive(true);
             InMenu.TransitionTo(1.5f);
             Cursor.lockState = CursorLockMode.None;
             PausePanelIntro();
@@ -76,7 +69,6 @@ public class PausePanelB : MonoBehaviour
     public void Resume()
     {
         isMenuPaused = false;
-        menuPaused.SetActive(false);
     }
     void PausePanelIntro()
     {
