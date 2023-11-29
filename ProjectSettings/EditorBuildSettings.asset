@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/LaserGame2.unity
     guid: dc516b175eaa16e4092557564c06e4d3
   - enabled: 1
-    path: Assets/Scenes/Levels/Labirint3.unity
+    path: Assets/Scenes/Labirint.unity
     guid: b5b4587afeb29c549a7a1be3b9b4a56f
   - enabled: 1
-    path: Assets/Scenes/Levels/LogicGame4.unity
+    path: Assets/Scenes/Levels/LogicGame.unity
     guid: e59e7ad228060904d9cfe600b68eac06
   - enabled: 1
     path: Assets/Scenes/Levels/FinalLevel5.unity
