@@ -52,8 +52,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba3eecf559c05944802fbb057653129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  islevelComletePanel: 0
-  menuPaused: {fileID: 3766928592821987830}
   levelComletePanelRect: {fileID: 3766928592821987829}
   topPanelY: 1000
   middlePanelY: 0
@@ -62,6 +60,7 @@ MonoBehaviour:
   Normal: {fileID: 24500006, guid: adb499db56f77c84fbf7ebcd367256fc, type: 2}
   InMenu: {fileID: -8451620660015720928, guid: adb499db56f77c84fbf7ebcd367256fc, type: 2}
   nextLevel: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &1240671586
 MonoBehaviour:
   m_ObjectHideFlags: 0

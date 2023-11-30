@@ -57,6 +57,7 @@ MonoBehaviour:
   middlePosY: 0
   tweenDuraction: 0.4
   canvasGroup: {fileID: 6478538278692571674}
+  isMenuPaused: 0
   Normal: {fileID: 24500006, guid: adb499db56f77c84fbf7ebcd367256fc, type: 2}
   InMenu: {fileID: -8451620660015720928, guid: adb499db56f77c84fbf7ebcd367256fc, type: 2}
 --- !u!1 &6478538277529655164
