@@ -76,7 +76,6 @@ public class LosePanel : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
@@ -85,7 +84,7 @@ public class LosePanel : MonoBehaviour
         Application.Quit();
     }
 
-    public void Continue()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

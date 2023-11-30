@@ -62,7 +62,6 @@ public class LevelCompletePanel : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.None;
         nextLevel.UnlockLevel(0);
-        SceneManager.LoadScene(0);
     }
 
 

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 public class PausePanelB : MonoBehaviour
 {
+    public GameObject pausePanel;
     [SerializeField] KeyCode keyMenuPaused;
 
     [SerializeField] RectTransform pausePanelRect;
@@ -20,19 +21,25 @@ public class PausePanelB : MonoBehaviour
     public AudioMixerSnapshot Normal;
     public AudioMixerSnapshot InMenu;
 
-    private void Update()
+    private void Start()
     {
-        ActiveMenu();
+        pausePanel.SetActive(false);
     }
-    public async void ActiveMenu()
+    private void Update()
     {
         if (Input.GetKeyDown(keyMenuPaused))
         {
             isMenuPaused = !isMenuPaused;
         }
 
+
+        ActiveMenu();
+    }
+    public async void ActiveMenu()
+    {
         if (isMenuPaused)
         {
+            pausePanel.SetActive(true);
             Time.timeScale = 0;
             InMenu.TransitionTo(0.65f);
             //InMenu.TransitionTo(1.5f);
@@ -52,13 +59,6 @@ public class PausePanelB : MonoBehaviour
     public void LoadMenu()
     { 
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
-    }
-
-    public void QuitGame()
-    {
-        Debug.Log("QUIT");
-        Application.Quit();
     }
     public void Restart()
     {

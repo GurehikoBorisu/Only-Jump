@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
+    public PausePanelB pause;
     public Animator anim;
     public Camera cam;
 
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        pause = FindAnyObjectByType<PausePanelB>();
         anim = GetComponent<Animator>();
         realSpeed = moveSpeed;
         cam = FindObjectOfType<Camera>();        
