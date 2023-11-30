@@ -34,14 +34,16 @@ public class PausePanelB : MonoBehaviour
         if (isMenuPaused)
         {
             Time.timeScale = 0;
-            InMenu.TransitionTo(1.5f);
+            InMenu.TransitionTo(0.65f);
+            //InMenu.TransitionTo(1.5f);
             Cursor.lockState = CursorLockMode.None;
             PausePanelIntro();
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
-            Normal.TransitionTo(1.5f);
+            Normal.TransitionTo(0.65f);
+            //Normal.TransitionTo(1.5f);
             Time.timeScale = 1f;
             await PausePanelOutro();
         }

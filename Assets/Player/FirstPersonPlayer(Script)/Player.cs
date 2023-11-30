@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         }
         if (hit.collider.CompareTag("Finish1"))
         {
-            levelCompletePanel.islevelComletePanel = true;
+            //levelCompletePanel.islevelComletePanel = true;
         }
     }
 

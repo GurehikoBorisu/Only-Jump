@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     public float gravity;
+    bool isSpawning = true;
 
     // Start is called before the first frame update
     void Start()

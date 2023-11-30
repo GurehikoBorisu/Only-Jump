@@ -1,15 +1,13 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TimeGame : MonoBehaviour
 {
-    public float timeGame;
-
+    public TMP_Text timeText;
+    float timeGame;
     int hourse;
     int minutes;
-
-    public Text timeText;
-
     private void Awake()
     {
         if (PlayerPrefs.HasKey("Minutes"))

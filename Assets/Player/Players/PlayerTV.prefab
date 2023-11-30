@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 7761987513364221176}
   - component: {fileID: 6057022496647624498}
   - component: {fileID: 1658539569}
+  - component: {fileID: 1090258247181724486}
   m_Layer: 8
   m_Name: PlayerTV
   m_TagString: Player
@@ -552,7 +553,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c764bf25a59c84f958e7a9a2213ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loseMenu: {fileID: 0}
+  losePanel: {fileID: 0}
+--- !u!114 &1090258247181724486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7761987513364221127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2397bec41ae0144fac51de83ee3d055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7761987513381300321
 GameObject:
   m_ObjectHideFlags: 0

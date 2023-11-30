@@ -14,57 +14,64 @@ public class LosePanel : MonoBehaviour
     [SerializeField] private float tweenDuration;
     [SerializeField] private CanvasGroup canvasGroup;
 
-    public AudioMixerSnapshot Normal;
+    //public AudioMixerSnapshot Normal;
     public AudioMixerSnapshot InMenu;
 
-    private Player player;
-    //    AudioSource audioSource;
-    // public AudioMixerSnapshot Lose;
+    //private Player player;
+    AudioSource audioSource;
+    //public AudioMixerSnapshot Lose;
 
     private void Awake()
     {
-            player = FindAnyObjectByType<Player>();
+        //player = FindAnyObjectByType<Player>();
+        audioSource = GetComponent<AudioSource>();
     }
     void Start()
     {
-     //   audioSource = GetComponent<AudioSource>();
-     //   Lose.TransitionTo(0);
-     //   audioSource.Play();
+        Time.timeScale = 0;
+        InMenu.TransitionTo(0.75f);
+        Cursor.lockState = CursorLockMode.None;
+        audioSource.Play();
+        PlayLosePanelIntro();
+        //   audioSource = GetComponent<AudioSource>();
+        //   Lose.TransitionTo(0);
+        //   audioSource.Play();
     }
 
-    private void Update()
-    {
-        HandleMenuActivation();
-    }
-    private async void HandleMenuActivation()
-    {
-        if (player.isDead)
-        {
-            Time.timeScale = 0;
-            InMenu.TransitionTo(1.5f);
-            Cursor.lockState = CursorLockMode.None;
-            PlayPausePanelIntro();
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Normal.TransitionTo(1.5f);
-            Time.timeScale = 1f;
-            await PlayPausePanelOutro();
-        }
-    }
+    //private void Update()
+    //{
+    //    HandleMenuActivation();
+    //}
+    //private async void HandleMenuActivation()
+    //{
+    //    if (player.isDead)
+    //    {
+    //        Time.timeScale = 0;
+    //        InMenu.TransitionTo(1.5f);
+    //        Cursor.lockState = CursorLockMode.None;
+    //        PlayPausePanelIntro();
+    //    }
+    //    else
+    //    {
+    //        Cursor.lockState = CursorLockMode.Locked;
+    //        Normal.TransitionTo(1.5f);
+    //        Time.timeScale = 1f;
+    //        await PlayPausePanelOutro();
+    //    }
+    //}
 
-    void PlayPausePanelIntro()
+    //void PlayPausePanelIntro()
+    void PlayLosePanelIntro()
     {
         canvasGroup.DOFade(1, tweenDuration).SetUpdate(true);
         losePanelRect.DOAnchorPosY(middlePanelY, tweenDuration).SetUpdate(true);
     }
 
-    async Task PlayPausePanelOutro()
-    {
-        canvasGroup.DOFade(0, tweenDuration).SetUpdate(true);
-        await losePanelRect.DOAnchorPosY(topPanelY, tweenDuration).SetUpdate(true).AsyncWaitForCompletion();
-    }
+    //async Task PlayPausePanelOutro()
+    //{
+    //    canvasGroup.DOFade(0, tweenDuration).SetUpdate(true);
+    //    await losePanelRect.DOAnchorPosY(topPanelY, tweenDuration).SetUpdate(true).AsyncWaitForCompletion();
+    //}
 
     public void LoadMenu()
     {
