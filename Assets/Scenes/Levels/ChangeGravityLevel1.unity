@@ -466,15 +466,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761987513364221178, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7761987513364221178, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.06
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7761987513364221178, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 471.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7761987513364221178, guid: 98309cec3755a284f8c1cb13555d90e5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9479,6 +9479,14 @@ PrefabInstance:
     - target: {fileID: 4558977530901671376, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
       propertyPath: m_Name
       value: Game_Panels 2.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130879412657708389, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130879412657708389, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: z
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 5130879412657708389, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
       propertyPath: player

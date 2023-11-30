@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 public class LevelCompletePanel : MonoBehaviour
 {
     //public bool islevelComletePanel;
+    public float x, y, z;
     [SerializeField] private RectTransform levelComletePanelRect;
     [SerializeField] private float topPanelY, middlePanelY;
     [SerializeField] private float tweenDuration;
@@ -80,6 +81,9 @@ public class LevelCompletePanel : MonoBehaviour
     }
     public void NextLevel()
     {
+        PlayerPrefs.SetFloat("posX", x);
+        PlayerPrefs.SetFloat("posY", y);
+        PlayerPrefs.SetFloat("posZ", z);
         int nextLevel = SceneManager.GetActiveScene().buildIndex+1;
         SceneManager.LoadScene(nextLevel);
     }
