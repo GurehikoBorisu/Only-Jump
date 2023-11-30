@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +8,7 @@ public class TimeGame : MonoBehaviour
     int hourse;
     int minutes;
 
-    public TMP_Text timeText;
+    public Text timeText;
 
     private void Awake()
     {
