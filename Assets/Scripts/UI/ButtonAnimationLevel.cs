@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonAnimationLevel : MonoBehaviour
@@ -9,10 +8,10 @@ public class ButtonAnimationLevel : MonoBehaviour
     Button btn;
     Vector3 upScale = new Vector3(1.2f, 1.2f, 1);
     public int levelIndex;
-    public SceneHandler sceneHandler;
+    public LevelManager levelManager;
     private void Awake()
     {
-        sceneHandler = FindAnyObjectByType<SceneHandler>();
+        levelManager = FindAnyObjectByType<LevelManager>();
         btn = gameObject.GetComponent<Button>();
         btn.onClick.AddListener(Anim);
     }
@@ -20,7 +19,11 @@ public class ButtonAnimationLevel : MonoBehaviour
     void Anim()
     {
         LeanTween.scale(gameObject, upScale, .1f);
-        LeanTween.scale(gameObject, Vector3.one, .1f).setDelay(.1f);
+        LeanTween.scale(gameObject, Vector3.one, .1f).setDelay(.1f).setOnComplete(loadLevel);
     }
 
+    void loadLevel()
+    {
+        levelManager.LoadLevel(levelIndex);
+    }
 }

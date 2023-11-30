@@ -4,29 +4,22 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-    public Player player;
-    public PausePanelB pausePanel;
-    public PlayerMovement playerMove;
+    public GameObject losePanel;
     private void Awake()
     {
-        pausePanel = FindAnyObjectByType<PausePanelB>();
-        playerMove = GetComponent<PlayerMovement>();
-        player = GetComponent<Player>();
+
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         GameObject hittedObject = hit.collider.gameObject;
         if (hittedObject.CompareTag("DeathBlock") || hittedObject.CompareTag("Laser"))
         {
-            player.isDead = true;
-            //Destroy(gameObject);
+            Destroy(gameObject);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-           /* losePanel.SetActive(true);
-            GameObject canvas = losePanel.transform.parent.gameObject;*/
-
-            playerMove.enabled = false;
-            pausePanel.enabled = false;
+            losePanel.SetActive(true);
+            GameObject canvas = losePanel.transform.parent.gameObject;
+            canvas.GetComponent<PausePanelB>().enabled = false;
         }
     }
 }

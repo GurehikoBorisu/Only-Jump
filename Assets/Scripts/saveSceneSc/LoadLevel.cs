@@ -14,12 +14,12 @@ public class LoadLevel : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("Level"))
         {
-            PlayerPrefs.SetInt("Level", -1);
+            PlayerPrefs.SetInt("Level", 1);
         }
-
+        Debug.Log(PlayerPrefs.GetInt("Level"));
         switch (PlayerPrefs.GetInt("Level"))
         {
-            case -1:
+            case 1:
                 butt[0].interactable = true;
                 butt[1].interactable = false;
                 butt[2].interactable = false;
@@ -27,7 +27,7 @@ public class LoadLevel : MonoBehaviour
                 butt[4].interactable = false;
                 break;
 
-            case 0:
+            case 2:
                 butt[0].interactable = true;
                 butt[1].interactable = true;
                 butt[2].interactable = false;
@@ -35,7 +35,7 @@ public class LoadLevel : MonoBehaviour
                 butt[4].interactable = false;
                 break;
 
-            case 1:
+            case 3:
                 butt[0].interactable = true;
                 butt[1].interactable = true;
                 butt[2].interactable = true;
@@ -43,7 +43,7 @@ public class LoadLevel : MonoBehaviour
                 butt[4].interactable = false;
                 break;
 
-            case 2:
+            case 4:
                 butt[0].interactable = true;
                 butt[1].interactable = true;
                 butt[2].interactable = true;
@@ -51,7 +51,7 @@ public class LoadLevel : MonoBehaviour
                 butt[4].interactable = false;
                 break;
 
-            case 3:
+            case 5:
                 butt[0].interactable = true;
                 butt[1].interactable = true;
                 butt[2].interactable = true;
@@ -65,6 +65,7 @@ public class LoadLevel : MonoBehaviour
         PlayerPrefs.SetFloat("posX", x);
         PlayerPrefs.SetFloat("posY", y);
         PlayerPrefs.SetFloat("posZ", z);
+        PlayerPrefs.SetInt("coins",0);
         SceneManager.LoadScene(levelNumber);
     }
     //public void load1()

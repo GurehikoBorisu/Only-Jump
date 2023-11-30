@@ -12,9 +12,9 @@ public class WallScript : MonoBehaviour
     }
     void Update()
     {
-/*        if (player.isDestroyWall)
+        if (player.isDestroyWall)
         {
             Destroy(gameObject);
-        }*/
+        }
     }
 }

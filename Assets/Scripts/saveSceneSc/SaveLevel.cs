@@ -25,15 +25,15 @@ public class SaveLevel : MonoBehaviour
     {
         if (Physics.CheckBox(transform.position + new Vector3(0, 2, 0), boxSize, new Quaternion(0, 0, 0, 0), layer))
         {
-            if (levelsComplete <= currentLevel)
+            if (levelsComplete < currentLevel+1 && levelsComplete == 5)
             {
-                PlayerPrefs.SetInt("Level", currentLevel);
+                PlayerPrefs.SetInt("Level", currentLevel + 1);
             }
 
-            if (currentLevel < 2)
-            {
-                SceneManager.LoadScene(currentLevel + 1);
-            }
+            //if (currentLevel < 2)
+            //{
+            //    //SceneManager.LoadScene(currentLevel + 1);
+            //}
         }
     }
 }

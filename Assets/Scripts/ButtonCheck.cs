@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class ButtonCheck : MonoBehaviour , IPointerEnterHandler
 {
     public GameObject eventSystem;
+    public float x, y, z;
     public int levelNumber;
     LoadLevel loadLevel;
     //MainMenu menu;
@@ -19,6 +20,9 @@ public class ButtonCheck : MonoBehaviour , IPointerEnterHandler
         if(gameObject.tag == "LoadLevelButton")
         {
             loadLevel.levelNumber = levelNumber;
+            loadLevel.x = x;
+            loadLevel.y = y;
+            loadLevel.z = z;
             //menu.z = z;
         }
     }
