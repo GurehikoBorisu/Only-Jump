@@ -9279,6 +9279,18 @@ PrefabInstance:
       value: Game_Panels 2.0
       objectReference: {fileID: 0}
     - target: {fileID: 5130879412657708389, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: x
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130879412657708389, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: y
+      value: 43.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130879412657708389, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130879412657708389, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1658539567}
