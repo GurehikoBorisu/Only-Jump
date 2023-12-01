@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 public class ButtonRaayDoorsOn : MonoBehaviour
 {
     private float distance = 3f;
-    public int sceneCount;
-
     public GameObject doors;
 
     void OnMouseDown()
@@ -17,7 +15,7 @@ public class ButtonRaayDoorsOn : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(sceneCount);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

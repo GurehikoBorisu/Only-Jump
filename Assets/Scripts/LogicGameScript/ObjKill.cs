@@ -3,13 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class ObjKill : MonoBehaviour
 {
-    [SerializeField] private int sceneCount;
-
+    public Vector3 boxSize;
+    public LayerMask layer;
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, boxSize);
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+
+    }
+    private void Update()
+    {
+        if (Physics.CheckBox(transform.position, boxSize, new Quaternion(0, 0, 0, 0), layer))
         {
-            SceneManager.LoadScene(sceneCount);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

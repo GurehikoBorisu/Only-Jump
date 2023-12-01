@@ -6,9 +6,17 @@ public class ColliderController : MonoBehaviour
 {
     public GameObject[] door;
     public int count;
+    public Vector3 boxSize;
+    public LayerMask layer;
+    public bool isBlock;
+    public bool isNextDoor;
 
     public bool isButtons_1;
-
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, boxSize);
+    }
     void Update()
     {
         if (count == 2)
@@ -16,10 +24,9 @@ public class ColliderController : MonoBehaviour
            
             Destroy(door[0]);
         }
-
-        if (count == 1)
+        if (Physics.CheckBox(transform.position, boxSize, new Quaternion(0, 0, 0, 0), layer) && isBlock)
         {
-            Destroy(door[1]);
+            Destroy(door[2]);
         }
     }
 
@@ -28,6 +35,7 @@ public class ColliderController : MonoBehaviour
         if (collision.gameObject.tag == "Obj")
         {
             count = 2;
+            isNextDoor = false;
         }
     }
 
@@ -35,7 +43,7 @@ public class ColliderController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obj")
         {
-            count = 1;
+            isNextDoor = true;
         }
     }
 }

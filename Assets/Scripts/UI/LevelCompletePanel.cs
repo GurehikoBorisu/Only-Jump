@@ -84,6 +84,7 @@ public class LevelCompletePanel : MonoBehaviour
         PlayerPrefs.SetFloat("posX", x);
         PlayerPrefs.SetFloat("posY", y);
         PlayerPrefs.SetFloat("posZ", z);
+        PlayerPrefs.SetInt("coins", 0);
         int nextLevel = SceneManager.GetActiveScene().buildIndex+1;
         SceneManager.LoadScene(nextLevel);
     }
