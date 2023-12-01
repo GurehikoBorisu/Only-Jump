@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     public float gravity;
     bool isSpawning = true;
+    public bool isOnPlatform;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         realSpeed = moveSpeed;
         cam = FindObjectOfType<Camera>();        
-        //Debug.Log($"{PlayerPrefs.GetFloat("posX")},{PlayerPrefs.GetFloat("posY")},{PlayerPrefs.GetFloat("posZ")}");    
+        Debug.Log($"{PlayerPrefs.GetFloat("posX")},{PlayerPrefs.GetFloat("posY")},{PlayerPrefs.GetFloat("posZ")}");    
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (!isRotating)
+        if (!isRotating && !isOnPlatform)
         {
             Jump();
         }

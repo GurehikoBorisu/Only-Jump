@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 6057022496647624498}
   - component: {fileID: 1658539569}
   - component: {fileID: 1090258247181724486}
+  - component: {fileID: 5303030408288961243}
   m_Layer: 8
   m_Name: PlayerTV
   m_TagString: Player
@@ -493,6 +494,7 @@ MonoBehaviour:
   anim: {fileID: 6057022496647624498}
   cam: {fileID: 0}
   gravity: -9.8
+  isOnPlatform: 0
   moveVector: {x: 0, y: 0, z: 0}
   moveSpeed: 10
   fastSpeed: 20
@@ -564,6 +566,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2397bec41ae0144fac51de83ee3d055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5303030408288961243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7761987513364221127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa2bb52d8e67a94c99a9136d847e6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7761987513381300321

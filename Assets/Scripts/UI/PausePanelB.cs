@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 public class PausePanelB : MonoBehaviour
 {
+    public float x, y, z;
+    public GameObject player;
     [SerializeField] KeyCode keyMenuPaused;
-
     [SerializeField] RectTransform pausePanelRect;
     [SerializeField] float topPosY, middlePosY;
     [SerializeField] float tweenDuraction;
@@ -37,10 +38,12 @@ public class PausePanelB : MonoBehaviour
             InMenu.TransitionTo(0.65f);
             //InMenu.TransitionTo(1.5f);
             Cursor.lockState = CursorLockMode.None;
+            player.layer = 0;
             PausePanelIntro();
         }
         else
         {
+            player.layer = 8;
             Cursor.lockState = CursorLockMode.Locked;
             Normal.TransitionTo(0.65f);
             //Normal.TransitionTo(1.5f);
@@ -62,9 +65,14 @@ public class PausePanelB : MonoBehaviour
     }
     public void Restart()
     {
-        PlayerPrefs.SetFloat("posX", 0);
-        PlayerPrefs.SetFloat("posY", 0);
-        PlayerPrefs.SetFloat("posZ", 0);
+        StartCoroutine(RestartCoroutine());
+    }
+    IEnumerator RestartCoroutine ()
+    {
+        PlayerPrefs.SetFloat("posX", x);
+        PlayerPrefs.SetFloat("posY", y);
+        PlayerPrefs.SetFloat("posZ", z);
+        yield return null;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

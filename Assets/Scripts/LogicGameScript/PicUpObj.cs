@@ -28,20 +28,26 @@ public class PicUpObj : MonoBehaviour
     private void OnMouseEnter()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, distanceView))
-        {
-            rayText.SetActive(true);
-        }
+        //if (Physics.Raycast(ray, distanceView))
+        //{
+        //    rayText.SetActive(true);
+        //}
     }
 
     private void OnMouseExit()
     {
-        if (distanceView < 4)
+        //if (distanceView < 4)
+        //{
+        //    rayText.SetActive(false);
+        //}
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "DeathBlock")
         {
-            rayText.SetActive(false);
+            Destroy(gameObject);
         }
     }
-
     private void Update()
     {
         if (rb.isKinematic == true)
@@ -51,7 +57,7 @@ public class PicUpObj : MonoBehaviour
             {
                 rb.useGravity = true;
                 rb.isKinematic = false;
-                rayText.SetActive(false);
+                //rayText.SetActive(false);
                 rb.AddForce(Camera.main.transform.forward * 500);
                 Debug.Log("Drop");
             }

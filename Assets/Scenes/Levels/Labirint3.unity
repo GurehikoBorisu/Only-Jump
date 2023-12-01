@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -49445,6 +49445,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2756850889425843230, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: x
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756850889425843230, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: y
+      value: 43.525
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756850889425843230, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756850889425843230, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1139255813}
     - target: {fileID: 2756850889425843231, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -49549,6 +49565,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1139255813}
+    - target: {fileID: 5130879413883561477, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5706485234679137816}
+    - target: {fileID: 5130879413883561477, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130879413883561477, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelCompletePanel, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5706485234553959499, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -49568,6 +49596,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5706485234679137816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5130879412657708389, guid: 7b87f4e4e644c1e4499b683f02a8eab4, type: 3}
+  m_PrefabInstance: {fileID: 5706485234679137814}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577878787729660785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba3eecf559c05944802fbb057653129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6725160222970766951 stripped

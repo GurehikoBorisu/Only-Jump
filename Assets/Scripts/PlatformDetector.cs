@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlatformDetector : MonoBehaviour
 {
@@ -15,21 +16,15 @@ public class PlatformDetector : MonoBehaviour
     {
         
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.tag == "Platform")
-    //    {
-    //        Debug.Log("Texas");
-    //        other.transform.SetParent(transform);
-    //    }
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if(other.gameObject.tag == "Platform")
-    //    {
-    //        Debug.Log("Error");
-    //        other.transform.SetParent(null);
-    //    }
-    //}
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.collider.CompareTag("Platform"))
+        {
+            gameObject.GetComponent<PlayerMovement>().isOnPlatform = true;
+        }
+        else
+        {
+            gameObject.GetComponent<PlayerMovement>().isOnPlatform = false;
+        }
+    }
 }
