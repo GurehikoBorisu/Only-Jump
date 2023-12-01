@@ -5,8 +5,9 @@ using UnityEngine;
 public class RotateScript : MonoBehaviour
 {
     public float speed = 20;
+    public Vector3 rotate;
     void Update()
     {
-        transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+        transform.Rotate(rotate * speed * Time.deltaTime);
     }
 }

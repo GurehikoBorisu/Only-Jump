@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu1 : MonoBehaviour
+public class MainMenu2 : MonoBehaviour
 {
     public AudioSource clickSound;
 
@@ -23,7 +23,7 @@ public class MainMenu1 : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("QUIT!");
+        Debug.Log("QUIT - 1");
         Application.Quit();
     }
 }
