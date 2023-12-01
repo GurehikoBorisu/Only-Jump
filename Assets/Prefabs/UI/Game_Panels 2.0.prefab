@@ -2358,6 +2358,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773b570daac00e44f9b5a69b4c60d142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  player: {fileID: 0}
   keyMenuPaused: 27
   pausePanelRect: {fileID: 2756850890817524521}
   topPosY: 1000
@@ -2779,6 +2783,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba3eecf559c05944802fbb057653129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
   levelComletePanelRect: {fileID: 5130879414067915641}
   topPanelY: 1000
   middlePanelY: 0
@@ -3745,8 +3752,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 5130879412657708389}
-          m_TargetAssemblyTypeName: LevelCompletePanel, Assembly-CSharp
+        - m_Target: {fileID: 2756850889425843230}
+          m_TargetAssemblyTypeName: PausePanelB, Assembly-CSharp
           m_MethodName: Restart
           m_Mode: 1
           m_Arguments:
